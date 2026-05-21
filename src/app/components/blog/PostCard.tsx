@@ -1,5 +1,5 @@
 import React from 'react';
-import { Post, CATEGORIES } from '../../data/mock';
+import { Post, CATEGORIES, postPath } from '../../data/mock';
 import { Card, CardContent } from '../ui/card';
 import { Badge } from '../ui/badge';
 import { Clock, Eye } from 'lucide-react';
@@ -14,19 +14,19 @@ interface PostCardProps {
 
 export function PostCard({ post, variant = 'default', className }: PostCardProps) {
   const category = CATEGORIES.find(c => c.slug === post.category);
-  const href = `/post/${post.id}`;
+  const href = postPath(post);
 
   if (variant === 'compact') {
     return (
       <Link href={href}>
         <div
-          className={cn("group cursor-pointer py-2.5 border-b border-gray-100 last:border-0 hover:bg-gray-50/50 transition-colors px-2 rounded-sm", className)}
+          className={cn("group cursor-pointer py-3 md:py-3.5 border-b border-gray-100 last:border-0 hover:bg-gray-50/50 transition-colors px-1 rounded-sm", className)}
         >
-          <div className="flex items-center gap-2 mb-0.5">
-            <span className="text-xs font-medium text-emerald-600">{category?.name}</span>
-            <span className="text-xs text-gray-400">{post.date}</span>
+          <div className="flex items-center gap-2 mb-1">
+            <span className="text-xs md:text-sm font-medium text-emerald-600">{category?.name}</span>
+            <span className="text-xs md:text-sm text-gray-400">{post.date}</span>
           </div>
-          <h3 className="text-sm font-medium text-gray-900 group-hover:text-emerald-700 transition-colors line-clamp-1">
+          <h3 className="text-base md:text-lg font-semibold text-gray-900 group-hover:text-emerald-700 transition-colors line-clamp-2 md:line-clamp-1 leading-snug">
             {post.title}
           </h3>
         </div>

@@ -77,7 +77,7 @@ export default function SearchPage() {
         filteredPosts.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {filteredPosts.map(post => (
-              <PostCard key={post.id} post={post} />
+              <PostCard key={post.slug} post={post} />
             ))}
           </div>
         ) : (

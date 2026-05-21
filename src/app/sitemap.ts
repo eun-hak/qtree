@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next';
-import { POSTS, CATEGORIES } from './data/mock';
+import { POSTS, CATEGORIES, postPath } from './data/mock';
 import { SITE_URL } from '../lib/site';
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -52,7 +52,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 
   const postPages: MetadataRoute.Sitemap = POSTS.map((post) => ({
-    url: `${baseUrl}/post/${post.id}`,
+    url: `${baseUrl}${postPath(post)}`,
     lastModified: new Date(post.date),
     changeFrequency: 'monthly',
     priority: 0.7,

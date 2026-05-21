@@ -1,22 +1,22 @@
 import React from 'react';
 import { Metadata } from 'next';
-import { POSTS, CATEGORIES } from '../../data/mock';
+import { POSTS, CATEGORIES, getPostByParam, isLegacyNumericPostUrl, postPath } from '../../data/mock';
 import { PostCard } from '../../components/blog/PostCard';
 import { TableOfContents } from '../../components/blog/TableOfContents';
 import { Badge } from '../../components/ui/badge';
 import { Button } from '../../components/ui/button';
 import { ChevronRight, Calendar, Tag, Share2, Facebook, Twitter, Linkedin } from 'lucide-react';
 import Link from 'next/link';
-import { notFound } from 'next/navigation';
+import { notFound, redirect } from 'next/navigation';
 import { SITE_NAME, siteUrl } from '../../../lib/site';
 
 interface PageProps {
-    params: Promise<{ id: string }>;
+    params: Promise<{ slug: string }>;
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-    const { id } = await params;
-    const post = POSTS.find(p => p.id === id);
+    const { slug } = await params;
+    const post = getPostByParam(slug);
 
     if (!post) {
         return {
@@ -25,15 +25,18 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     }
 
     const category = CATEGORIES.find(c => c.slug === post.category);
+    const canonical = siteUrl(postPath(post));
 
     return {
         title: post.title,
         description: post.summary,
         keywords: [post.category, category?.name || '', '블로그', '게시물'],
+        alternates: { canonical },
         openGraph: {
             title: post.title,
             description: post.summary,
             type: 'article',
+            url: canonical,
             publishedTime: post.date,
             authors: [SITE_NAME],
             tags: [category?.name || post.category],
@@ -48,25 +51,31 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export async function generateStaticParams() {
     return POSTS.map((post) => ({
-        id: post.id,
+        slug: post.slug,
     }));
 }
 
 export default async function PostDetailPage({ params }: PageProps) {
-    const { id } = await params;
+    const { slug } = await params;
 
-    if (!id || typeof id !== 'string') {
+    if (!slug || typeof slug !== 'string') {
         notFound();
     }
 
-    const post = POSTS.find(p => p.id === id);
+    const post = getPostByParam(slug);
 
     if (!post) {
         notFound();
     }
 
+    if (isLegacyNumericPostUrl(slug)) {
+        redirect(postPath(post));
+    }
+
     const category = CATEGORIES.find(c => c.slug === post.category);
-    const relatedPosts = POSTS.filter(p => p.id !== post.id && p.category === post.category);
+    const relatedPosts = POSTS.filter(
+        (p) => p.slug !== post.slug && p.category === post.category
+    );
 
     const jsonLd = {
         '@context': 'https://schema.org',
@@ -91,7 +100,7 @@ export default async function PostDetailPage({ params }: PageProps) {
         },
         mainEntityOfPage: {
             '@type': 'WebPage',
-            '@id': siteUrl(`/post/${post.id}`),
+            '@id': siteUrl(postPath(post)),
         },
         keywords: post.tags?.join(', ') || category?.name || '',
         articleSection: category?.name || post.category,
@@ -167,7 +176,8 @@ export default async function PostDetailPage({ params }: PageProps) {
                             [&_ol]:my-2 [&_ol]:ml-4 [&_ol]:list-decimal [&_ol]:space-y-1
                             [&_li]:text-sm [&_li]:text-gray-700 [&_li]:leading-relaxed
                             [&_strong]:font-semibold [&_strong]:text-gray-900
-                            [&_a]:text-emerald-600 [&_a]:no-underline hover:[&_a]:underline">
+                            [&_a]:text-emerald-600 [&_a]:no-underline hover:[&_a]:underline
+                            [&_img]:my-4 [&_img]:w-full [&_img]:max-w-full [&_img]:h-auto [&_img]:max-h-[400px] [&_img]:object-cover [&_img]:rounded-lg [&_img]:border [&_img]:border-gray-200">
                             <div dangerouslySetInnerHTML={{ __html: post.content }} />
                         </div>
                     </section>
@@ -203,8 +213,8 @@ export default async function PostDetailPage({ params }: PageProps) {
                     <section>
                         <h3 className="font-semibold text-gray-900 mb-2 text-xs uppercase tracking-wider">{category?.name} 인기글</h3>
                         <div className="space-y-2">
-                            {relatedPosts.slice(0, 3).map(p => (
-                                <Link key={p.id} href={`/post/${p.id}`}>
+                            {relatedPosts.slice(0, 3).map((p) => (
+                                <Link key={p.slug} href={postPath(p)}>
                                     <div className="group cursor-pointer">
                                         <h4 className="text-xs font-medium text-gray-900 group-hover:text-emerald-600 leading-snug mb-0.5">{p.title}</h4>
                                         <span className="text-xs text-gray-400">{p.date}</span>
@@ -220,8 +230,8 @@ export default async function PostDetailPage({ params }: PageProps) {
                 <div className="container mx-auto px-4 max-w-5xl">
                     <h2 className="text-base md:text-lg font-bold text-gray-900 mb-4">다음 읽을 글</h2>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                        {relatedPosts.slice(0, 3).map(relatedPost => (
-                            <PostCard key={relatedPost.id} post={relatedPost} />
+                        {relatedPosts.slice(0, 3).map((relatedPost) => (
+                            <PostCard key={relatedPost.slug} post={relatedPost} />
                         ))}
                     </div>
                 </div>

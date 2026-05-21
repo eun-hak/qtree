@@ -76,7 +76,7 @@ export default async function CategoryPage({ params }: PageProps) {
 
           <div className="space-y-4">
             {posts.map((post) => (
-              <div key={post.id}>
+              <div key={post.slug}>
                 <PostCard post={post} />
               </div>
             ))}

@@ -69,7 +69,7 @@ npm start
 /cookies            - 쿠키 정책
 /search             - 게시글 검색
 /category/[slug]    - 카테고리별 글 목록
-/post/[id]          - 게시글 상세
+/post/[slug]        - 게시글 상세 (slug URL, 예전 /post/1 은 자동 이동)
 ```
 
 ## Google AdSense 승인 체크리스트

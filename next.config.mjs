@@ -1,3 +1,5 @@
+import { LEGACY_NUMERIC_POST_REDIRECTS } from './src/app/data/legacy-post-redirects.mjs';
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     reactStrictMode: true,
@@ -32,7 +34,15 @@ const nextConfig = {
     },
     
     async redirects() {
+        const legacyPostRedirects = LEGACY_NUMERIC_POST_REDIRECTS.map(({ id, slug }) => ({
+            source: `/post/${id}`,
+            destination: `/post/${slug}`,
+            permanent: true,
+        }));
+
         return [
+            ...legacyPostRedirects,
+            { source: '/post/4', destination: '/post/burnt-pot-baking-soda-clean', permanent: true },
             { source: '/category/lookup', destination: '/category/services', permanent: true },
             { source: '/category/apply', destination: '/category/services', permanent: true },
             { source: '/category/tools', destination: '/category/services', permanent: true },
