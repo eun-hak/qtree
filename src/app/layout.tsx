@@ -6,6 +6,7 @@ import { Header } from "./components/layout/Header";
 import { Footer } from "./components/layout/Footer";
 import { SuppressHydrationWarning } from "./components/SuppressHydrationWarning";
 import {
+  GOOGLE_ADSENSE_CLIENT_ID,
   GOOGLE_ANALYTICS_ID,
   GOOGLE_SITE_VERIFICATION,
   SITE_DESCRIPTION,
@@ -110,6 +111,10 @@ export default function RootLayout({
         <meta name="theme-color" content="#059669" />
         <meta name="msapplication-TileColor" content="#059669" />
         <meta name="msapplication-TileImage" content="/icon.svg" />
+        <meta
+          name="google-adsense-account"
+          content={GOOGLE_ADSENSE_CLIENT_ID}
+        />
       </head>
       <body
         className="font-sans antialiased text-gray-900 bg-white"
@@ -127,6 +132,12 @@ export default function RootLayout({
             gtag('config', '${GOOGLE_ANALYTICS_ID}');
           `}
         </Script>
+        <Script
+          async
+          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${GOOGLE_ADSENSE_CLIENT_ID}`}
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
         <SuppressHydrationWarning />
         <Header />
         <main suppressHydrationWarning>{children}</main>

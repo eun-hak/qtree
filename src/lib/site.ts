@@ -43,6 +43,8 @@ export const GOOGLE_SITE_VERIFICATION =
 
 export const GOOGLE_ANALYTICS_ID = "G-YNYS81PEJB";
 
+export const GOOGLE_ADSENSE_CLIENT_ID = "ca-pub-2643737170468374";
+
 export const SITE_EMAIL = "contact@qtree.kr";
 
 export const SITE_EMAIL_PRIVACY = "privacy@qtree.kr";
