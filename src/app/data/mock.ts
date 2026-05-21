@@ -27,6 +27,20 @@ import { POST_CONTENTS } from "./posts-content";
 
 export const POSTS: Post[] = [
   {
+    id: "27",
+    title: "방충망 분리 없이 미세먼지 및 벌레 사체 제거하는 법",
+    summary:
+      "방충망 오염 원인, 정전기·계면활성제 활용 원리, 보양·도포·불리기·닦기·건조 순서, 계절 청소 주기·날씨 선택·고층 안전 주의를 정리했습니다.",
+    content: POST_CONTENTS["window-screen-dust-bug-clean"],
+    category: LIST_CATEGORY_SLUG,
+    date: "2026-05-21",
+    slug: "window-screen-dust-bug-clean",
+    views: 0,
+    tags: ["방충망","미세먼지","벌레 사체","주방세제","창문 청소"],
+    readingTime: 6,
+  },
+
+  {
     id: "26",
     title: "텀블러 뚜껑 실리콘 패킹 곰팡이 제거 및 위생 관리법",
     summary:
