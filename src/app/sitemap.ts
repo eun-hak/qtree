@@ -5,6 +5,9 @@ import { SITE_URL } from '../lib/site';
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = SITE_URL;
   
+  const SITE_LAUNCH = new Date('2026-04-27');
+  const LEGAL_DATE = new Date('2026-04-27');
+
   const staticPages: MetadataRoute.Sitemap = [
     {
       url: baseUrl,
@@ -14,33 +17,33 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/about`,
-      lastModified: new Date('2026-01-12'),
+      lastModified: SITE_LAUNCH,
       changeFrequency: 'monthly',
-      priority: 0.9,
+      priority: 0.7,
     },
     {
       url: `${baseUrl}/contact`,
-      lastModified: new Date('2026-01-12'),
+      lastModified: SITE_LAUNCH,
       changeFrequency: 'monthly',
-      priority: 0.8,
+      priority: 0.6,
     },
     {
       url: `${baseUrl}/privacy-policy`,
-      lastModified: new Date('2026-01-12'),
+      lastModified: LEGAL_DATE,
       changeFrequency: 'yearly',
-      priority: 0.5,
+      priority: 0.3,
     },
     {
       url: `${baseUrl}/terms`,
-      lastModified: new Date('2026-01-12'),
+      lastModified: LEGAL_DATE,
       changeFrequency: 'yearly',
-      priority: 0.5,
+      priority: 0.3,
     },
     {
       url: `${baseUrl}/cookies`,
-      lastModified: new Date('2026-01-12'),
+      lastModified: LEGAL_DATE,
       changeFrequency: 'yearly',
-      priority: 0.5,
+      priority: 0.3,
     },
   ];
 
@@ -54,8 +57,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const postPages: MetadataRoute.Sitemap = POSTS.map((post) => ({
     url: `${baseUrl}${postPath(post)}`,
     lastModified: new Date(post.date),
-    changeFrequency: 'monthly',
-    priority: 0.7,
+    changeFrequency: 'weekly' as const,
+    priority: 0.8,
   }));
 
   return [...staticPages, ...categoryPages, ...postPages];
