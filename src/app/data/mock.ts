@@ -27,6 +27,20 @@ import { POST_CONTENTS } from "./posts-content";
 
 export const POSTS: Post[] = [
   {
+    id: "29",
+    title: "콘센트 및 스위치 커버 찌든 때 안전 세척법",
+    summary:
+      "콘센트·스위치 찌든 때 원인, 수분 최소화·면봉 세척 원리, 전원 차단·먼지 제거·찌든 때·건조·전원 복구 순서, 물기 금지·코팅·월 1회 관리 팁을 정리했습니다.",
+    content: POST_CONTENTS["outlet-switch-cover-safe-clean"],
+    category: LIST_CATEGORY_SLUG,
+    date: "2026-05-22",
+    slug: "outlet-switch-cover-safe-clean",
+    views: 0,
+    tags: ["콘센트","스위치","찌든 때","감전 예방","거실 청소"],
+    readingTime: 6,
+  },
+
+  {
     id: "28",
     title: "벽지 및 몰딩 틈새 먼지, 정전기 방지법으로 관리하기",
     summary:
