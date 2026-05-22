@@ -1,0 +1,22 @@
+# GitHub schedule 동작 여부만 확인 (발행 스크립트 실행 안 함)
+# 30~60분 안에 run이 생기면 schedule 자체는 정상
+
+name: Schedule Test
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print trigger info
+        run: |
+          echo "event_name=${{ github.event_name }}"
+          echo "ref=${{ github.ref }}"
+          echo "sha=${{ github.sha }}"
+          echo "UTC now: $(date -u)"
+          echo "KST now: $(TZ=Asia/Seoul date)"

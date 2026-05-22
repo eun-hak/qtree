@@ -27,6 +27,20 @@ import { POST_CONTENTS } from "./posts-content";
 
 export const POSTS: Post[] = [
   {
+    id: "28",
+    title: "벽지 및 몰딩 틈새 먼지, 정전기 방지법으로 관리하기",
+    summary:
+      "벽지 먼지·알레르기 원인, 린스·섬유유연제 정전기 방지 원리, 방지액 제조·밀대·몰딩 틈새·건조 순서, 합지 벽지·물기·월 1회 관리 팁을 정리했습니다.",
+    content: POST_CONTENTS["wallpaper-molding-dust-antistatic"],
+    category: LIST_CATEGORY_SLUG,
+    date: "2026-05-22",
+    slug: "wallpaper-molding-dust-antistatic",
+    views: 0,
+    tags: ["벽지","몰딩","먼지","정전기","린스","거실 청소"],
+    readingTime: 6,
+  },
+
+  {
     id: "27",
     title: "방충망 분리 없이 미세먼지 및 벌레 사체 제거하는 법",
     summary:

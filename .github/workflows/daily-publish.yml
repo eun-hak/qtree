@@ -2,9 +2,8 @@ name: Daily Post Publish
 
 on:
   schedule:
-    # 매일 KST 10:25 (= UTC 01:25) 실행 — 정각 부하 회피
-    - cron: "25 1 * * *"
-  # 수동 실행도 가능 (Actions 탭 → Run workflow)
+    # 10분마다 실행 → 스크립트가 KST 10시 이후·당일 1회만 실제 발행
+    - cron: "*/10 * * * *"
   workflow_dispatch:
 
 jobs:
@@ -12,6 +11,10 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+
+    env:
+      # 수동 Run workflow 시 시간·당일 가드 무시
+      FORCE_PUBLISH: ${{ github.event_name == 'workflow_dispatch' && '1' || '' }}
 
     steps:
       - name: Checkout
@@ -33,9 +36,9 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add -A
           if git diff --cached --quiet; then
-            echo "변경사항 없음 — 오늘은 대기열이 비어 있습니다."
+            echo "변경사항 없음 (가드 스킵·대기열 비음·이미 발행됨)"
           else
-            TODAY=$(date +'%Y-%m-%d')
+            TODAY=$(TZ=Asia/Seoul date +'%Y-%m-%d')
             git commit -m "publish: daily post ${TODAY}"
             git push
           fi
