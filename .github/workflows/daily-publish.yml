@@ -1,10 +1,26 @@
+# 매일 1편 발행 (대기열 → mock.ts / posts-content.ts)
+#
+# ⚠️ 이 저장소에서 GitHub schedule(cron)이 동작하지 않아,
+#    cron-job.org 등 외부 스케줄러가 workflow_dispatch API를 호출하는 방식을 사용합니다.
+#
+# cron-job.org 설정 예:
+#   URL: POST https://api.github.com/repos/eun-hak/qtree/actions/workflows/daily-publish.yml/dispatches
+#   Headers: Authorization: Bearer <GITHUB_PAT>, Accept: application/vnd.github+json
+#   Body: {"ref":"main"}
+#   주기: 10분마다 (스크립트가 KST 10시 이후·당일 1회만 실제 발행)
+#
+# PAT 권한: repo (또는 Actions: Read and write)
+
 name: Daily Post Publish
 
 on:
-  schedule:
-    # 10분마다 실행 → 스크립트가 KST 10시 이후·당일 1회만 실제 발행
-    - cron: "*/10 * * * *"
   workflow_dispatch:
+    inputs:
+      force:
+        description: "오늘 이미 발행했어도 1편 더 올리기 (테스트용)"
+        required: false
+        default: false
+        type: boolean
 
 jobs:
   publish:
@@ -13,8 +29,7 @@ jobs:
       contents: write
 
     env:
-      # 수동 Run workflow 시 시간·당일 가드 무시
-      FORCE_PUBLISH: ${{ github.event_name == 'workflow_dispatch' && '1' || '' }}
+      FORCE_PUBLISH: ${{ inputs.force && '1' || '' }}
 
     steps:
       - name: Checkout
