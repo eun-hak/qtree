@@ -27,6 +27,20 @@ import { POST_CONTENTS } from "./posts-content";
 
 export const POSTS: Post[] = [
   {
+    id: "30",
+    title: "창틀 흙먼지 제거 및 겨울철 결로·곰팡이 방지 관리법",
+    summary:
+      "창틀 흙먼지·결로·곰팡이 원인, 불리기·실리콘 살균·물기 제거·환기 원리, 신문지 불림·곰팡이·건조 순서, 월 1회·결로 테이프·부드러운 도구 팁을 정리했습니다.",
+    content: POST_CONTENTS["window-frame-dust-condensation-mold"],
+    category: LIST_CATEGORY_SLUG,
+    date: "2026-05-23",
+    slug: "window-frame-dust-condensation-mold",
+    views: 0,
+    tags: ["창틀","흙먼지","결로","곰팡이","실리콘","창문 청소"],
+    readingTime: 7,
+  },
+
+  {
     id: "29",
     title: "콘센트 및 스위치 커버 찌든 때 안전 세척법",
     summary:
