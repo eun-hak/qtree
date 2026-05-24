@@ -27,6 +27,20 @@ import { POST_CONTENTS } from "./posts-content";
 
 export const POSTS: Post[] = [
   {
+    id: "31",
+    title: "뻑뻑해진 문 손잡이 및 경첩 소음 제거하는 법",
+    summary:
+      "문 손잡이·경첩 소음 원인, 윤활제·바세린 메커니즘, 먼지 제거·도포·여닫기·잔여물 닦기 순서, 윤활제 선택·6개월 점검·소량 사용 팁을 정리했습니다.",
+    content: POST_CONTENTS["door-handle-hinge-squeak-lubricate"],
+    category: LIST_CATEGORY_SLUG,
+    date: "2026-05-24",
+    slug: "door-handle-hinge-squeak-lubricate",
+    views: 0,
+    tags: ["문 손잡이","경첩","끼익 소음","윤활제","WD-40","거실 청소"],
+    readingTime: 6,
+  },
+
+  {
     id: "30",
     title: "창틀 흙먼지 제거 및 겨울철 결로·곰팡이 방지 관리법",
     summary:
