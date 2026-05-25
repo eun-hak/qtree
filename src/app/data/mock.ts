@@ -27,6 +27,20 @@ import { POST_CONTENTS } from "./posts-content";
 
 export const POSTS: Post[] = [
   {
+    id: "32",
+    title: "식기세척기 내부 석회질 제거 및 필터 위생 관리법",
+    summary:
+      "석회질·필터 오염 원인, 구연산·식초 중화·고온 공회전 원리, 필터 세척·내부 세척·노즐·패킹 순서, 월 1회·전용 세제·건조 관리 팁을 정리했습니다.",
+    content: POST_CONTENTS["dishwasher-limescale-filter-clean"],
+    category: LIST_CATEGORY_SLUG,
+    date: "2026-05-25",
+    slug: "dishwasher-limescale-filter-clean",
+    views: 0,
+    tags: ["식기세척기","석회질","필터","구연산","주방 청소"],
+    readingTime: 7,
+  },
+
+  {
     id: "31",
     title: "뻑뻑해진 문 손잡이 및 경첩 소음 제거하는 법",
     summary:
