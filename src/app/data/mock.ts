@@ -27,6 +27,20 @@ import { POST_CONTENTS } from "./posts-content";
 
 export const POSTS: Post[] = [
   {
+    id: "33",
+    title: "세탁기 문 주변 고무 패킹 곰팡이 제거 및 위생 관리법",
+    summary:
+      "고무 패킹 곰팡이 원인, 락스 습포 살균 원리, 이물질 제거·습포·세척·건조 순서, 환기·혼합 금지·세탁 후 물기 제거 팁을 정리했습니다.",
+    content: POST_CONTENTS["washer-gasket-mold-bleach-clean"],
+    category: LIST_CATEGORY_SLUG,
+    date: "2026-05-26",
+    slug: "washer-gasket-mold-bleach-clean",
+    views: 0,
+    tags: ["세탁기","고무 패킹","곰팡이","락스","세탁"],
+    readingTime: 7,
+  },
+
+  {
     id: "32",
     title: "식기세척기 내부 석회질 제거 및 필터 위생 관리법",
     summary:
