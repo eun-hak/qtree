@@ -27,6 +27,20 @@ import { POST_CONTENTS } from "./posts-content";
 
 export const POSTS: Post[] = [
   {
+    id: "34",
+    title: "제습기 필터 먼지 제거 및 내부 물탱크 위생 관리법",
+    summary:
+      "제습기 필터·물탱크 오염 원인, 진공·베이킹소다·구연산 살균 원리, 필터·물탱크 세척·헹굼·재조립 순서, 2주·주 1회·완전 건조·배수구 점검 팁을 정리했습니다.",
+    content: POST_CONTENTS["dehumidifier-filter-tank-clean"],
+    category: LIST_CATEGORY_SLUG,
+    date: "2026-05-27",
+    slug: "dehumidifier-filter-tank-clean",
+    views: 0,
+    tags: ["제습기","필터","물탱크","베이킹소다","구연산","거실 청소"],
+    readingTime: 7,
+  },
+
+  {
     id: "33",
     title: "세탁기 문 주변 고무 패킹 곰팡이 제거 및 위생 관리법",
     summary:
