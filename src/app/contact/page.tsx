@@ -233,7 +233,7 @@ export default function ContactPage() {
               <div>
                 <p className="font-semibold text-gray-900">Q. 기고나 협업이 가능한가요?</p>
                 <p className="text-gray-700">
-                  A. 생활 서비스·공공·앱 사용법 등 실용 정보 기고를 검토합니다.
+                  A. 청소·세탁·가전·공간 관리 등 실전 생활 가이드 기고를 검토합니다.
                 </p>
               </div>
               <div>

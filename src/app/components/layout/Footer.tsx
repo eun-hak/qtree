@@ -11,12 +11,12 @@ export function Footer() {
           <div className="col-span-1 md:col-span-2">
             <h3 className="font-bold text-base mb-2 text-gray-900">{SITE_NAME}</h3>
             <p className="text-gray-500 text-xs leading-relaxed max-w-xs mb-2">
-              택배·우편·공공서비스·앱 설정 등 일상에서 자주 쓰는 온라인 서비스
-              사용법을 단계별로 정리하는 생활 정보 블로그입니다.
+              주방·욕실·세탁·거실 등 집안 청소와 세탁, 가전·공간 관리를
+              단계별로 정리하는 실전 생활 가이드입니다.
             </p>
             <p className="text-gray-400 text-xs leading-relaxed max-w-md">
-              본 사이트의 안내는 정보 제공 목적이며, 각 기관·서비스의 최신 정책과
-              화면은 달라질 수 있습니다.
+              본 사이트의 안내는 정보 제공 목적이며, 제품·재질·환경에 따라
+              결과가 달라질 수 있습니다.
             </p>
           </div>
 

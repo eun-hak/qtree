@@ -15,7 +15,7 @@ export const SITE_TAGLINE = "생활 고민을 단계별로 해결";
 export const SITE_TITLE = `${SITE_NAME} — ${SITE_TAGLINE}`;
 
 export const SITE_DESCRIPTION =
-  "청소·세탁부터 공공서비스 이용, 앱 설정까지. 막막할 때 바로 찾아볼 수 있도록 직접 해보고 단계별로 정리한 실전 생활 가이드입니다.";
+  "주방·욕실·세탁·거실까지, 집안 청소와 세탁·가전 관리를 직접 해보고 단계별로 정리한 실전 생활 가이드입니다.";
 
 export const SITE_KEYWORDS = [
   SITE_NAME,
@@ -26,11 +26,12 @@ export const SITE_KEYWORDS = [
   "세탁 방법",
   "베이킹소다",
   "구연산",
+  "과탄산소다",
   "욕실 청소",
   "주방 청소",
   "얼룩 제거",
-  "공공서비스",
-  "앱 사용법",
+  "곰팡이 제거",
+  "가전 청소",
   "생활 정보",
 ] as const;
 

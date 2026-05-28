@@ -96,7 +96,7 @@ export default async function CategoryPage({ params }: PageProps) {
             </h3>
             <p className="text-xs text-gray-600 leading-relaxed">
               {category.description} {category.name} 관련 글을 모아 두었습니다.
-              새로운 서비스 사용법 안내가 추가될 때마다 업데이트합니다.
+              새로운 생활 가이드가 추가될 때마다 업데이트합니다.
             </p>
           </div>
         </div>

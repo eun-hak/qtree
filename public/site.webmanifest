@@ -1,7 +1,7 @@
 {
   "name": "큐트리",
   "short_name": "큐트리",
-  "description": "qtree.com — 일상 서비스 조회·신청·발급·설정 방법",
+  "description": "qtree.kr — 집안 청소·세탁·가전·공간 관리 실전 가이드",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",

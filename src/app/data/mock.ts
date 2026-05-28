@@ -471,7 +471,7 @@ export const CATEGORIES: Category[] = [
     name: "생활서비스",
     slug: LIST_CATEGORY_SLUG,
     description:
-      "택배·우편·공공서비스 발급, 신청·접수, 앱·도구 설정 등 일상에서 쓰는 온라인 서비스 사용법을 모았습니다.",
+      "주방·욕실·세탁·거실·현관 등 집안 청소, 세탁, 가전·공간 관리 방법을 단계별로 모았습니다.",
     count: POSTS.length,
   },
 ];

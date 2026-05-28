@@ -46,9 +46,9 @@ export default function Home() {
           <span className="text-emerald-600">단계별로 정리했습니다</span>
         </h1>
         <p className="text-base md:text-lg text-gray-500 leading-relaxed">
-          청소·세탁부터 공공서비스·앱 설정까지
+          주방·욕실·세탁·거실까지
           <br className="hidden sm:block" />
-          막막할 때 찾아보기 좋게 직접 해보고 썼습니다.
+          집안 관리를 직접 해보고 단계별로 정리했습니다.
         </p>
         <div className="flex justify-center pt-3">
           <Link href={listPath}>

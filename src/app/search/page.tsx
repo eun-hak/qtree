@@ -89,7 +89,7 @@ export default function SearchPage() {
             </p>
             <div className="flex flex-wrap gap-1.5 justify-center">
               <span className="text-xs text-gray-500">추천 키워드:</span>
-              {['택배', '정부24', '주민등록', '크롬', '팝업'].map(keyword => (
+              {['베이킹소다', '곰팡이', '얼룩 제거', '세탁', '욕실 청소'].map(keyword => (
                 <Badge
                   key={keyword}
                   variant="secondary"
@@ -111,7 +111,7 @@ export default function SearchPage() {
           </p>
           <div className="flex flex-wrap gap-1.5 justify-center">
             <span className="text-xs text-gray-500">인기 검색어:</span>
-            {['배송조회', '등본 발급', '카카오톡', 'PDF', '인증서'].map(keyword => (
+            {['구연산', '락스', '주방 청소', '수건 냄새', '패딩 세탁'].map(keyword => (
               <Badge
                 key={keyword}
                 variant="secondary"
