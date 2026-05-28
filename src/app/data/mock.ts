@@ -27,6 +27,20 @@ import { POST_CONTENTS } from "./posts-content";
 
 export const POSTS: Post[] = [
   {
+    id: "35",
+    title: "가습기 수조 석회질 분해 및 살균 세척법",
+    summary:
+      "가습기 석회질·진동자 오염 원인, 구연산 중화·살균 원리, 비우기·불림·세척·헹굼·건조 순서, 주 1~2회·세제 금지·완전 건조 팁을 정리했습니다.",
+    content: POST_CONTENTS["humidifier-tank-limescale-clean"],
+    category: LIST_CATEGORY_SLUG,
+    date: "2026-05-28",
+    slug: "humidifier-tank-limescale-clean",
+    views: 0,
+    tags: ["가습기","석회질","수조","구연산","거실 청소"],
+    readingTime: 7,
+  },
+
+  {
     id: "34",
     title: "제습기 필터 먼지 제거 및 내부 물탱크 위생 관리법",
     summary:
