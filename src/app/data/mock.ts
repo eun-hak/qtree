@@ -27,6 +27,20 @@ import { POST_CONTENTS } from "./posts-content";
 
 export const POSTS: Post[] = [
   {
+    id: "36",
+    title: "선풍기 분해 없이 송풍구 먼지 및 필터 위생 관리법",
+    summary:
+      "선풍기 먼지·정전기 원인, 린스·섬유유연제 코팅 원리, 방지액·안전망·틈새·날개 순서, 전원 차단·물기·2주 주기 팁을 정리했습니다.",
+    content: POST_CONTENTS["fan-grill-dust-clean-no-disassemble"],
+    category: LIST_CATEGORY_SLUG,
+    date: "2026-05-29",
+    slug: "fan-grill-dust-clean-no-disassemble",
+    views: 0,
+    tags: ["선풍기","송풍구","먼지","린스","정전기","거실 청소"],
+    readingTime: 6,
+  },
+
+  {
     id: "35",
     title: "가습기 수조 석회질 분해 및 살균 세척법",
     summary:
