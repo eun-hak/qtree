@@ -27,6 +27,20 @@ import { POST_CONTENTS } from "./posts-content";
 
 export const POSTS: Post[] = [
   {
+    id: "37",
+    title: "옷장 곰팡이 예방 및 공기 흐름을 고려한 수납 관리법",
+    summary:
+      "옷장 곰팡이·습기 원인, 공기 순환·천연 제습 원리, 비우기·간격 수납·제습제·환기 순서, 냄새 체크·비닐 제거·수납 박스 팁을 정리했습니다.",
+    content: POST_CONTENTS["closet-mold-airflow-storage"],
+    category: LIST_CATEGORY_SLUG,
+    date: "2026-05-30",
+    slug: "closet-mold-airflow-storage",
+    views: 0,
+    tags: ["옷장","곰팡이","제습","수납","거실 청소"],
+    readingTime: 7,
+  },
+
+  {
     id: "36",
     title: "선풍기 분해 없이 송풍구 먼지 및 필터 위생 관리법",
     summary:
