@@ -27,6 +27,20 @@ import { POST_CONTENTS } from "./posts-content";
 
 export const POSTS: Post[] = [
   {
+    id: "38",
+    title: "신발장 냄새 탈취 및 가죽 신발 보관 관리법",
+    summary:
+      "신발장 악취·가죽 손상 원인, 제습·베이킹소다·커피 탈취 원리, 먼지 제거·신발 정리·신문지·환기 순서, 신문지 교체·직사광선·물기 제거 팁을 정리했습니다.",
+    content: POST_CONTENTS["shoe-cabinet-odor-leather-care"],
+    category: LIST_CATEGORY_SLUG,
+    date: "2026-05-31",
+    slug: "shoe-cabinet-odor-leather-care",
+    views: 0,
+    tags: ["신발장","탈취","가죽 신발","베이킹소다","거실 청소"],
+    readingTime: 7,
+  },
+
+  {
     id: "37",
     title: "옷장 곰팡이 예방 및 공기 흐름을 고려한 수납 관리법",
     summary:
