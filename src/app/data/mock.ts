@@ -27,6 +27,20 @@ import { POST_CONTENTS } from "./posts-content";
 
 export const POSTS: Post[] = [
   {
+    id: "39",
+    title: "주방 서랍장 위생 관리 및 수납 효율 극대화법",
+    summary:
+      "주방 서랍장 기름·습기 오염 원인, 분리 수납·라이너 원리, 비우기·살균·라이너·트레이·점검 순서, 건조 수납·동선·나무 소재 관리 팁을 정리했습니다.",
+    content: POST_CONTENTS["kitchen-drawer-hygiene-storage"],
+    category: LIST_CATEGORY_SLUG,
+    date: "2026-06-01",
+    slug: "kitchen-drawer-hygiene-storage",
+    views: 0,
+    tags: ["주방 서랍장","수납","위생","라이너","주방 청소"],
+    readingTime: 7,
+  },
+
+  {
     id: "38",
     title: "신발장 냄새 탈취 및 가죽 신발 보관 관리법",
     summary:
