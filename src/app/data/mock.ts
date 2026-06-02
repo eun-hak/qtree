@@ -27,6 +27,20 @@ import { POST_CONTENTS } from "./posts-content";
 
 export const POSTS: Post[] = [
   {
+    id: "40",
+    title: "화장품 보관함 먼지 및 위생 관리 가이드",
+    summary:
+      "화장품 보관함 오염 원인, 알코올 살균·라이너 원리, 비우기·소독·라이너·월 1회 점검 순서, 습기·아크릴·도구 세척 팁을 정리했습니다.",
+    content: POST_CONTENTS["cosmetic-storage-dust-hygiene"],
+    category: LIST_CATEGORY_SLUG,
+    date: "2026-06-02",
+    slug: "cosmetic-storage-dust-hygiene",
+    views: 0,
+    tags: ["화장품 보관함","위생","알코올","살균","거실 청소"],
+    readingTime: 6,
+  },
+
+  {
     id: "39",
     title: "주방 서랍장 위생 관리 및 수납 효율 극대화법",
     summary:
