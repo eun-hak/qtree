@@ -27,6 +27,20 @@ import { POST_CONTENTS } from "./posts-content";
 
 export const POSTS: Post[] = [
   {
+    id: "41",
+    title: "현관 바닥 타일 찌든 때 제거 및 오염 방지 코팅법",
+    summary:
+      "현관 타일·줄눈 오염 원인, 구연산·발수 코팅 원리, 먼지 제거·불림·코팅·경화 순서, 6개월 재코팅·완전 건조·줄눈 보수 팁을 정리했습니다.",
+    content: POST_CONTENTS["entrance-tile-stain-coating"],
+    category: LIST_CATEGORY_SLUG,
+    date: "2026-06-03",
+    slug: "entrance-tile-stain-coating",
+    views: 0,
+    tags: ["현관","타일","찌든 때","발수 코팅","줄눈","거실 청소"],
+    readingTime: 7,
+  },
+
+  {
     id: "40",
     title: "화장품 보관함 먼지 및 위생 관리 가이드",
     summary:
