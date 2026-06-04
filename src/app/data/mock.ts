@@ -27,6 +27,20 @@ import { POST_CONTENTS } from "./posts-content";
 
 export const POSTS: Post[] = [
   {
+    id: "42",
+    title: "매트리스 얼룩(땀, 소변) 및 진드기 분해 건식 청소법",
+    summary:
+      "매트리스 땀·소변 얼룩과 진드기 번식 원인, 베이킹소다 건식 흡착·중화 원리, 먼지 흡입·도포·불림·재흡입·에탄올 마무리 순서, 3~6개월 주기·액체 즉시 흡수·청소기 필터 점검 팁을 정리했습니다.",
+    content: POST_CONTENTS["mattress-stain-dust-mite-dry-clean"],
+    category: LIST_CATEGORY_SLUG,
+    date: "2026-06-04",
+    slug: "mattress-stain-dust-mite-dry-clean",
+    views: 0,
+    tags: ["매트리스","베이킹소다","진드기","건식 청소","얼룩","침실 청소"],
+    readingTime: 6,
+  },
+
+  {
     id: "41",
     title: "현관 바닥 타일 찌든 때 제거 및 오염 방지 코팅법",
     summary:
