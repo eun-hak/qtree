@@ -27,6 +27,20 @@ import { POST_CONTENTS } from "./posts-content";
 
 export const POSTS: Post[] = [
   {
+    id: "43",
+    title: "커버 분리 없는 패브릭 소파 찌든 때 및 생활 얼룩 제거법",
+    summary:
+      "패브릭 소파 생활 얼룩·냄새 원인, 중성 세제·과탄산소다 분해·표백 원리, 먼지 흡입·분사·불림·흡착 닦기·헹굼·건조 순서, 소재 테스트·수분 최소화·여름철 월 1회 관리 팁을 정리했습니다.",
+    content: POST_CONTENTS["fabric-sofa-stain-spot-clean"],
+    category: LIST_CATEGORY_SLUG,
+    date: "2026-06-05",
+    slug: "fabric-sofa-stain-spot-clean",
+    views: 0,
+    tags: ["패브릭 소파","찌든 때","중성 세제","과탄산소다","얼룩 제거","거실 청소"],
+    readingTime: 6,
+  },
+
+  {
     id: "42",
     title: "매트리스 얼룩(땀, 소변) 및 진드기 분해 건식 청소법",
     summary:
