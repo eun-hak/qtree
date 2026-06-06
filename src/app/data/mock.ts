@@ -27,6 +27,20 @@ import { POST_CONTENTS } from "./posts-content";
 
 export const POSTS: Post[] = [
   {
+    id: "44",
+    title: "블라인드(우드/콤비) 떼지 않고 면장갑으로 먼지 완벽 제거법",
+    summary:
+      "블라인드 슬랫 먼지·역유입 원인, 면장갑 정전기 흡착 원리, 각도 조절·장갑 쓸기·부분 세척·건조 순서, 우드 물기 금지·알루미늄 날 주의·2주~월 1회 루틴 팁을 정리했습니다.",
+    content: POST_CONTENTS["blind-dust-cotton-glove-clean"],
+    category: LIST_CATEGORY_SLUG,
+    date: "2026-06-06",
+    slug: "blind-dust-cotton-glove-clean",
+    views: 0,
+    tags: ["블라인드","우드 블라인드","면장갑","먼지","정전기","창문 청소"],
+    readingTime: 6,
+  },
+
+  {
     id: "43",
     title: "커버 분리 없는 패브릭 소파 찌든 때 및 생활 얼룩 제거법",
     summary:
