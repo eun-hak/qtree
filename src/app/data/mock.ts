@@ -27,6 +27,20 @@ import { POST_CONTENTS } from "./posts-content";
 
 export const POSTS: Post[] = [
   {
+    id: "45",
+    title: "무거운 러그·카페트 집에서 하는 소금 활용 건식 세탁법",
+    summary:
+      "러그·카페트 깊은 오염·진드기 원인, 굵은 소금 흡착·살균 원리, 먼지 흡입·도포·문지르기·방치·재흡입 순서, 천일염 사용·건조 소금·월 1회 루틴 팁을 정리했습니다.",
+    content: POST_CONTENTS["rug-carpet-salt-dry-clean"],
+    category: LIST_CATEGORY_SLUG,
+    date: "2026-06-07",
+    slug: "rug-carpet-salt-dry-clean",
+    views: 0,
+    tags: ["러그","카페트","소금","건식 세탁","진드기","거실 청소"],
+    readingTime: 7,
+  },
+
+  {
     id: "44",
     title: "블라인드(우드/콤비) 떼지 않고 면장갑으로 먼지 완벽 제거법",
     summary:
