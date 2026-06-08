@@ -27,6 +27,20 @@ import { POST_CONTENTS } from "./posts-content";
 
 export const POSTS: Post[] = [
   {
+    id: "46",
+    title: "욕실 선반 및 생활용품 녹슨 자국 케첩 활용 광택 복원법",
+    summary:
+      "욕실 금속 녹 발생 원인, 케첩 리코펜·구연산 용해 원리, 이물질 제거·도포·불림·솔 세척·건조 순서, 철수세미 금지·콜라 담그기·양유 코팅 재발 방지 팁을 정리했습니다.",
+    content: POST_CONTENTS["bathroom-rust-ketchup-restore"],
+    category: LIST_CATEGORY_SLUG,
+    date: "2026-06-08",
+    slug: "bathroom-rust-ketchup-restore",
+    views: 0,
+    tags: ["녹 제거","케첩","욕실 선반","금속 복원","부식","욕실 청소"],
+    readingTime: 7,
+  },
+
+  {
     id: "45",
     title: "무거운 러그·카페트 집에서 하는 소금 활용 건식 세탁법",
     summary:
