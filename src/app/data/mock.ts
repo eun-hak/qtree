@@ -27,6 +27,20 @@ import { POST_CONTENTS } from "./posts-content";
 
 export const POSTS: Post[] = [
   {
+    id: "47",
+    title: "바닥에 밴 반려동물 배변 냄새 및 얼룩 식초 활용 완벽 탈취법",
+    summary:
+      "마룻바닥 배변 얼룩·암모니아 냄새 원인, 식초 중화·살균 원리, 수분 흡수·희석액 분사·불림·닦기·헹굼·건조 순서, 원목 수분 주의·베이킹소다 병행·천연 식초 팁을 정리했습니다.",
+    content: POST_CONTENTS["pet-urine-vinegar-deodorize"],
+    category: LIST_CATEGORY_SLUG,
+    date: "2026-06-09",
+    slug: "pet-urine-vinegar-deodorize",
+    views: 0,
+    tags: ["반려동물","소변 탈취","식초","마룻바닥","암모니아","거실 청소"],
+    readingTime: 8,
+  },
+
+  {
     id: "46",
     title: "욕실 선반 및 생활용품 녹슨 자국 케첩 활용 광택 복원법",
     summary:
