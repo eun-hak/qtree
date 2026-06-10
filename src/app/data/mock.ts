@@ -27,6 +27,20 @@ import { POST_CONTENTS } from "./posts-content";
 
 export const POSTS: Post[] = [
   {
+    id: "48",
+    title: "스팀 다리미 바닥 탄 자국 치약 활용 세척 및 내부 석회질 청소법",
+    summary:
+      "다리미 탄 자국·석회질 막힘 원인, 치약 연마·구연산 분해 원리, 치약 세척·면봉 케어·구연산수 순환·헹굼·건조 순서, 철수세미 금지·2~3개월 주기·잔수 제거 팁을 정리했습니다.",
+    content: POST_CONTENTS["steam-iron-toothpaste-limescale-clean"],
+    category: LIST_CATEGORY_SLUG,
+    date: "2026-06-10",
+    slug: "steam-iron-toothpaste-limescale-clean",
+    views: 0,
+    tags: ["스팀 다리미","치약","탄 자국","석회질","구연산","세탁"],
+    readingTime: 7,
+  },
+
+  {
     id: "47",
     title: "바닥에 밴 반려동물 배변 냄새 및 얼룩 식초 활용 완벽 탈취법",
     summary:
