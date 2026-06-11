@@ -27,6 +27,20 @@ import { POST_CONTENTS } from "./posts-content";
 
 export const POSTS: Post[] = [
   {
+    id: "49",
+    title: "비데 노즐 찌든 때 및 물때 식초·베이킹소다 안전 살균 세척법",
+    summary:
+      "비데 노즐 물때·세균 번식 원인, 식초 살균·베이킹소다 유기물 분해 원리, 노즐 추출·도포·불림·솔 세척·헹굼·복귀 순서, 전자부 물 유입·철수세미 금지·2주~월 1회 루틴 팁을 정리했습니다.",
+    content: POST_CONTENTS["bidet-nozzle-vinegar-baking-soda-clean"],
+    category: LIST_CATEGORY_SLUG,
+    date: "2026-06-11",
+    slug: "bidet-nozzle-vinegar-baking-soda-clean",
+    views: 0,
+    tags: ["비데","노즐","식초","베이킹소다","살균","욕실 청소"],
+    readingTime: 7,
+  },
+
+  {
     id: "48",
     title: "스팀 다리미 바닥 탄 자국 치약 활용 세척 및 내부 석회질 청소법",
     summary:
