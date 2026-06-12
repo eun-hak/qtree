@@ -27,6 +27,20 @@ import { POST_CONTENTS } from "./posts-content";
 
 export const POSTS: Post[] = [
   {
+    id: "50",
+    title: "코팅 프라이팬 끈적한 기름때 밀가루 흡착 세척 및 시즈닝 관리법",
+    summary:
+      "코팅 팬 기름때·코팅 손상 원인, 밀가루 유분 흡착·오일 시즈닝 원리, 밀가루 문지르기·세척·가열·오일 코팅 순서, 철수세미 금지·발연점 높은 오일·급냉각 주의 팁을 정리했습니다.",
+    content: POST_CONTENTS["coated-pan-flour-seasoning-clean"],
+    category: LIST_CATEGORY_SLUG,
+    date: "2026-06-12",
+    slug: "coated-pan-flour-seasoning-clean",
+    views: 0,
+    tags: ["프라이팬","밀가루","기름때","시즈닝","코팅팬","주방 청소"],
+    readingTime: 7,
+  },
+
+  {
     id: "49",
     title: "비데 노즐 찌든 때 및 물때 식초·베이킹소다 안전 살균 세척법",
     summary:
