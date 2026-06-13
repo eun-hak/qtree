@@ -27,6 +27,20 @@ import { POST_CONTENTS } from "./posts-content";
 
 export const POSTS: Post[] = [
   {
+    id: "51",
+    title: "기계식 키보드 및 마우스 손때(유분기) 알코올 활용 살균 청소법",
+    summary:
+      "키보드·마우스 손때·세균 번식 원인, 알코올 유분 용해·살균·휘발 원리, 전원 차단·먼지 제거·천 닦기·면봉 틈새·건조 순서, 액체 분사 금지·코팅 테스트·딥클리닝 주기 팁을 정리했습니다.",
+    content: POST_CONTENTS["keyboard-mouse-alcohol-clean"],
+    category: LIST_CATEGORY_SLUG,
+    date: "2026-06-13",
+    slug: "keyboard-mouse-alcohol-clean",
+    views: 0,
+    tags: ["키보드","마우스","알코올","손때","살균","전자기기 청소"],
+    readingTime: 8,
+  },
+
+  {
     id: "50",
     title: "코팅 프라이팬 끈적한 기름때 밀가루 흡착 세척 및 시즈닝 관리법",
     summary:
