@@ -27,6 +27,20 @@ import { POST_CONTENTS } from "./posts-content";
 
 export const POSTS: Post[] = [
   {
+    id: "52",
+    title: "베란다 우수관(배수관) 악취 및 벌레 트랩 활용 차단 청소법",
+    summary:
+      "베란다 우수관 악취·해충 유입 원인, 락스 살균·차단 트랩 원리, 환기·희석액 불림·솔 세척·헹굼·트랩 설치 순서, 찬물 사용·규격 측정·배수 점검 팁을 정리했습니다.",
+    content: POST_CONTENTS["balcony-drain-trap-bleach-clean"],
+    category: LIST_CATEGORY_SLUG,
+    date: "2026-06-14",
+    slug: "balcony-drain-trap-bleach-clean",
+    views: 0,
+    tags: ["우수관","베란다","락스","악취","배수관","욕실 청소"],
+    readingTime: 7,
+  },
+
+  {
     id: "51",
     title: "기계식 키보드 및 마우스 손때(유분기) 알코올 활용 살균 청소법",
     summary:
