@@ -5,7 +5,7 @@ import { PostCard } from '../../components/blog/PostCard';
 import { TableOfContents } from '../../components/blog/TableOfContents';
 import { Badge } from '../../components/ui/badge';
 import { Button } from '../../components/ui/button';
-import { ChevronRight, Calendar, Tag, Share2, Facebook, Twitter, Linkedin } from 'lucide-react';
+import { ChevronRight, Calendar, Tag, Share2, Facebook, Twitter, Linkedin, BadgeCheck, PencilLine } from 'lucide-react';
 import Link from 'next/link';
 import { notFound, redirect } from 'next/navigation';
 import { SITE_NAME, siteUrl } from '../../../lib/site';
@@ -86,9 +86,10 @@ export default async function PostDetailPage({ params }: PageProps) {
         datePublished: post.date,
         dateModified: post.date,
         author: {
-            '@type': 'Organization',
-            name: SITE_NAME,
-            url: siteUrl(),
+            '@type': 'Person',
+            name: `${SITE_NAME} 편집팀`,
+            description: '집안 청소·세탁·생활관리 방법을 직접 시험해 보고 단계별로 기록하는 편집팀',
+            url: siteUrl('/about'),
         },
         publisher: {
             '@type': 'Organization',
@@ -148,6 +149,18 @@ export default async function PostDetailPage({ params }: PageProps) {
                             <span className="text-gray-400">조회 {post.views.toLocaleString()}</span>
                         </div>
 
+                        <div className="flex items-center justify-center md:justify-start gap-2 text-xs text-gray-500">
+                            <span className="inline-flex items-center gap-1 font-medium text-gray-700">
+                                <PencilLine className="h-3 w-3 text-emerald-600" />
+                                {SITE_NAME} 편집팀
+                            </span>
+                            <span className="text-gray-300">·</span>
+                            <span className="inline-flex items-center gap-1 text-emerald-700">
+                                <BadgeCheck className="h-3 w-3" />
+                                직접 시험 후 작성
+                            </span>
+                        </div>
+
                         <h1 className="text-lg md:text-2xl font-bold tracking-tight text-gray-900 leading-snug mb-2">
                             {post.title}
                         </h1>
@@ -179,6 +192,29 @@ export default async function PostDetailPage({ params }: PageProps) {
                             [&_a]:text-emerald-600 [&_a]:no-underline hover:[&_a]:underline
                             [&_img]:my-4 [&_img]:w-full [&_img]:max-w-full [&_img]:h-auto [&_img]:max-h-[400px] [&_img]:object-cover [&_img]:rounded-lg [&_img]:border [&_img]:border-gray-200">
                             <div dangerouslySetInnerHTML={{ __html: post.content }} />
+                        </div>
+                    </section>
+
+                    <section className="mt-6 p-4 bg-white border border-gray-200 rounded-lg flex gap-3">
+                        <div className="shrink-0">
+                            <div className="h-10 w-10 rounded-full bg-emerald-100 flex items-center justify-center">
+                                <PencilLine className="h-5 w-5 text-emerald-600" />
+                            </div>
+                        </div>
+                        <div className="min-w-0">
+                            <div className="flex items-center gap-1.5 mb-0.5">
+                                <span className="font-semibold text-gray-900 text-sm">{SITE_NAME} 편집팀</span>
+                                <BadgeCheck className="h-3.5 w-3.5 text-emerald-600" />
+                            </div>
+                            <p className="text-xs text-gray-600 leading-relaxed">
+                                이 글은 {SITE_NAME} 편집팀이 같은 방법을 실제 집안 환경에서 직접 따라 해 보고,
+                                효과가 있었던 순서와 실패했던 부분, 주의할 점을 정리한 내용입니다.
+                                제품·재질·오염 상태에 따라 결과가 다를 수 있어, 새로운 방법은 눈에 띄지 않는 곳에서
+                                먼저 시험해 보시길 권합니다.
+                                {post.date && (
+                                    <span className="block mt-1 text-gray-400">최종 점검: {post.date}</span>
+                                )}
+                            </p>
                         </div>
                     </section>
 

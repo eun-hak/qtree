@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { ChevronRight, Target, Users, BookOpen, Shield } from "lucide-react";
+import { ChevronRight, Target, Users, BookOpen, Shield, PencilLine } from "lucide-react";
 import { pageTitle, SITE_DESCRIPTION, SITE_NAME } from "../../lib/site";
 
 export const metadata = {
@@ -94,6 +94,39 @@ export default function AboutPage() {
               </p>
             </div>
           </div>
+        </section>
+
+        <section className="mb-8">
+          <div className="flex items-center gap-2 mb-4">
+            <div className="bg-indigo-100 p-2 rounded-md">
+              <PencilLine className="h-4 w-4 text-indigo-600" />
+            </div>
+            <h2 className="text-xl font-bold text-gray-900 m-0">
+              누가, 어떻게 쓰나요
+            </h2>
+          </div>
+          <p className="text-gray-700 leading-relaxed mb-3 text-sm">
+            {SITE_NAME}는 1인 가구·신혼·반려동물 가정 등에서 실제로 살림을 해 온
+            운영자와 편집팀이 함께 만듭니다. 새로 다루는 청소·세탁 방법은
+            글로 정리하기 전에 <strong>직접 집에서 따라 해 보는 것</strong>을 원칙으로 합니다.
+          </p>
+          <p className="text-gray-700 leading-relaxed mb-3 text-sm">
+            그래서 각 글에는 단순 정보뿐 아니라 <strong>실제로 해 보니 효과가 있었던
+            순서</strong>, 처음에 실패했던 부분, 재질을 상하게 했던 실수처럼
+            직접 겪은 시행착오를 함께 담으려고 합니다. 제품 사용법이 헷갈릴 때는
+            제조사 공식 안내와 성분 표기를 교차 확인한 뒤 반영합니다.
+          </p>
+          <ul className="space-y-2 text-gray-700 text-sm">
+            <li>
+              <strong>직접 시험</strong> — 가능한 방법은 집안 환경에서 먼저 따라 해 보고 기록
+            </li>
+            <li>
+              <strong>정기 점검</strong> — 더 나은 방법을 찾으면 기존 글을 수정·보완
+            </li>
+            <li>
+              <strong>독자 피드백 반영</strong> — 제보된 오류·보완점을 검토 후 갱신
+            </li>
+          </ul>
         </section>
 
         <section className="mb-8">
