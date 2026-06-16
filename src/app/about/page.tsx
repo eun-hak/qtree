@@ -1,11 +1,11 @@
 import React from "react";
 import Link from "next/link";
 import { ChevronRight, Target, Users, BookOpen, Shield, PencilLine } from "lucide-react";
-import { pageTitle, SITE_DESCRIPTION, SITE_NAME } from "../../lib/site";
+import { pageTitle, SITE_DESCRIPTION, SITE_NAME, SITE_NAME_EUN } from "../../lib/site";
 
 export const metadata = {
   title: pageTitle("사이트 소개"),
-  description: `${SITE_NAME}는 주방·욕실·세탁·거실 등 집안 청소와 세탁, 가전·공간 관리를 단계별로 정리하는 실전 생활 가이드입니다.`,
+  description: `${SITE_NAME_EUN} 주방·욕실·세탁·거실 등 집안 청소와 세탁, 가전·공간 관리를 단계별로 정리하는 실전 생활 가이드입니다.`,
   openGraph: {
     title: pageTitle("사이트 소개"),
     description: SITE_DESCRIPTION,
@@ -42,7 +42,7 @@ export default function AboutPage() {
             <h2 className="text-xl font-bold text-gray-900 m-0">사이트 목적</h2>
           </div>
           <p className="text-gray-700 leading-relaxed mb-3 text-sm">
-            {SITE_NAME}는 집안에서 자주 겪는 청소·세탁·가전·공간 관리 문제를{" "}
+            {SITE_NAME_EUN} 집안에서 자주 겪는 청소·세탁·가전·공간 관리 문제를{" "}
             <strong>직접 해보고 단계별로 정리</strong>하는 것을 목표로 합니다.
             준비물, 순서, 주의할 점을 골라 바로 따라 할 수 있게 씁니다.
           </p>
@@ -106,7 +106,7 @@ export default function AboutPage() {
             </h2>
           </div>
           <p className="text-gray-700 leading-relaxed mb-3 text-sm">
-            {SITE_NAME}는 1인 가구·신혼·반려동물 가정 등에서 실제로 살림을 해 온
+            {SITE_NAME_EUN} 1인 가구·신혼·반려동물 가정 등에서 실제로 살림을 해 온
             운영자와 편집팀이 함께 만듭니다. 새로 다루는 청소·세탁 방법은
             글로 정리하기 전에 <strong>직접 집에서 따라 해 보는 것</strong>을 원칙으로 합니다.
           </p>

@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { ChevronRight } from 'lucide-react';
-import { pageTitle, SITE_EMAIL, SITE_NAME } from '../../lib/site';
+import { pageTitle, SITE_EMAIL, SITE_NAME, SITE_NAME_EUN } from '../../lib/site';
 
 export const metadata = {
   title: pageTitle('쿠키 정책'),
@@ -35,7 +35,7 @@ export default function CookiesPage() {
         <section className="mb-8">
           <h2 className="text-2xl font-bold mb-4 text-gray-900">2. 쿠키의 사용 목적</h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            {SITE_NAME}는 다음의 목적을 위해 쿠키를 사용합니다:
+            {SITE_NAME_EUN} 다음의 목적을 위해 쿠키를 사용합니다:
           </p>
           <ul className="list-disc pl-6 space-y-2 text-gray-700">
             <li><strong>성능 쿠키:</strong> 방문자 통계 및 웹사이트 성능 분석을 위한 쿠키입니다.</li>
@@ -111,7 +111,7 @@ export default function CookiesPage() {
         <section className="mb-8">
           <h2 className="text-2xl font-bold mb-4 text-gray-900">4. 제3자 쿠키</h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            {SITE_NAME}는 서비스 향상을 위해 다음과 같은 제3자 서비스를 사용할 수 있으며, 이러한 서비스들은 자체 쿠키를 사용할 수 있습니다:
+            {SITE_NAME_EUN} 서비스 향상을 위해 다음과 같은 제3자 서비스를 사용할 수 있으며, 이러한 서비스들은 자체 쿠키를 사용할 수 있습니다:
           </p>
           <ul className="list-disc pl-6 space-y-2 text-gray-700">
             <li><strong>Google Analytics:</strong> 웹사이트 방문 통계 분석</li>
@@ -140,7 +140,7 @@ export default function CookiesPage() {
         <section className="mb-8">
           <h2 className="text-2xl font-bold mb-4 text-gray-900">6. 쿠키 정책 변경</h2>
           <p className="text-gray-700 leading-relaxed">
-            {SITE_NAME}는 법률, 규정 또는 운영상의 필요에 따라 이 쿠키 정책을 수정할 수 있습니다. 
+            {SITE_NAME_EUN} 법률, 규정 또는 운영상의 필요에 따라 이 쿠키 정책을 수정할 수 있습니다. 
             변경사항이 있는 경우 웹사이트를 통해 공지합니다.
           </p>
         </section>

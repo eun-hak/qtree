@@ -8,6 +8,9 @@ export const SITE_DOMAIN = "qtree.kr";
 /** 화면·SEO에 표시되는 사이트명 */
 export const SITE_NAME = "큐트리";
 
+/** JSX `{SITE_NAME}는` 패턴의 띄어쓰기(큐트리 는) 방지 */
+export const SITE_NAME_EUN = `${SITE_NAME}는`;
+
 export const SITE_NAME_SHORT = "큐트리";
 
 export const SITE_TAGLINE = "생활 고민을 단계별로 해결";

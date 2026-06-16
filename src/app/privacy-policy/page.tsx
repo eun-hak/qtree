@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { ChevronRight } from 'lucide-react';
-import { pageTitle, SITE_EMAIL, SITE_NAME } from '../../lib/site';
+import { pageTitle, SITE_EMAIL, SITE_NAME, SITE_NAME_EUN } from '../../lib/site';
 
 export const metadata = {
   title: pageTitle('개인정보 처리 방침'),
@@ -27,7 +27,7 @@ export default function PrivacyPolicyPage() {
         <section className="mb-8">
           <h2 className="text-2xl font-bold mb-4 text-gray-900">1. 개인정보의 처리 목적</h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            {SITE_NAME}는 다음의 목적을 위하여 개인정보를 처리합니다. 처리하고 있는 개인정보는 다음의 목적 이외의 용도로는 이용되지 않으며, 
+            {SITE_NAME_EUN} 다음의 목적을 위하여 개인정보를 처리합니다. 처리하고 있는 개인정보는 다음의 목적 이외의 용도로는 이용되지 않으며, 
             이용 목적이 변경되는 경우에는 개인정보보호법 제18조에 따라 별도의 동의를 받는 등 필요한 조치를 이행할 예정입니다.
           </p>
           <ul className="list-disc pl-6 space-y-2 text-gray-700">
@@ -41,7 +41,7 @@ export default function PrivacyPolicyPage() {
         <section className="mb-8">
           <h2 className="text-2xl font-bold mb-4 text-gray-900">2. 개인정보의 처리 및 보유기간</h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            {SITE_NAME}는 법령에 따른 개인정보 보유·이용기간 또는 정보주체로부터 개인정보를 수집 시에 동의받은 보유·이용기간 내에서 
+            {SITE_NAME_EUN} 법령에 따른 개인정보 보유·이용기간 또는 정보주체로부터 개인정보를 수집 시에 동의받은 보유·이용기간 내에서 
             개인정보를 처리·보유합니다.
           </p>
           <ul className="list-disc pl-6 space-y-2 text-gray-700">
@@ -54,7 +54,7 @@ export default function PrivacyPolicyPage() {
         <section className="mb-8">
           <h2 className="text-2xl font-bold mb-4 text-gray-900">3. 처리하는 개인정보의 항목</h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            {SITE_NAME}는 다음의 개인정보 항목을 처리하고 있습니다:
+            {SITE_NAME_EUN} 다음의 개인정보 항목을 처리하고 있습니다:
           </p>
           <div className="bg-gray-50 p-6 rounded-lg mb-4">
             <h3 className="font-semibold mb-2 text-gray-900">문의 폼 이용 시 수집 항목</h3>
@@ -78,7 +78,7 @@ export default function PrivacyPolicyPage() {
         <section className="mb-8">
           <h2 className="text-2xl font-bold mb-4 text-gray-900">4. 개인정보의 제3자 제공</h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            {SITE_NAME}는 정보주체의 개인정보를 제1조(개인정보의 처리 목적)에서 명시한 범위 내에서만 처리하며, 정보주체의 동의, 
+            {SITE_NAME_EUN} 정보주체의 개인정보를 제1조(개인정보의 처리 목적)에서 명시한 범위 내에서만 처리하며, 정보주체의 동의, 
             법률의 특별한 규정 등 개인정보 보호법 제17조 및 제18조에 해당하는 경우에만 개인정보를 제3자에게 제공합니다.
           </p>
         </section>
@@ -86,7 +86,7 @@ export default function PrivacyPolicyPage() {
         <section className="mb-8">
           <h2 className="text-2xl font-bold mb-4 text-gray-900">5. 쿠키(Cookie) 및 자동 수집 정보</h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            {SITE_NAME}는 서비스 제공 및 광고 운영을 위해 쿠키를 사용합니다. 쿠키는 웹사이트가 귀하의 브라우저에 전송하는 작은 텍스트 파일로, 
+            {SITE_NAME_EUN} 서비스 제공 및 광고 운영을 위해 쿠키를 사용합니다. 쿠키는 웹사이트가 귀하의 브라우저에 전송하는 작은 텍스트 파일로, 
             귀하의 컴퓨터 하드디스크에 저장됩니다.
           </p>
           <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-4">
@@ -104,14 +104,14 @@ export default function PrivacyPolicyPage() {
         <section className="mb-8">
           <h2 className="text-2xl font-bold mb-4 text-gray-900">5-1. 광고 서비스 및 제3자 쿠키</h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            {SITE_NAME}는 광고 서비스를 제공하기 위해 제3자 광고 제공업체(Google AdSense 등)를 이용합니다.
+            {SITE_NAME_EUN} 광고 서비스를 제공하기 위해 제3자 광고 제공업체(Google AdSense 등)를 이용합니다.
           </p>
-          <div className="bg-blue-50 border border-blue-200 p-6 rounded-lg mb-4">
+          <div className="not-prose bg-blue-50 border border-blue-200 p-6 rounded-lg mb-4">
             <h3 className="font-semibold mb-3 text-blue-900">Google AdSense</h3>
-            <ul className="space-y-2 text-sm text-blue-900">
-              <li>• 본 사이트는 Google AdSense를 사용하여 광고를 게재합니다. Google 및 제3자 광고 사업자는 쿠키를 사용하여 사용자의 이전 방문 기록을 기반으로 광고를 게재할 수 있습니다.</li>
-              <li>• 사용자는 <a href="https://www.google.com/settings/ads" className="underline" target="_blank" rel="noopener noreferrer">Google 광고 설정</a>에서 맞춤형 광고를 관리하거나 해제할 수 있습니다.</li>
-              <li>• Google의 개인정보처리방침: <a href="https://policies.google.com/privacy" className="underline" target="_blank" rel="noopener noreferrer">policies.google.com/privacy</a></li>
+            <ul className="list-disc pl-6 space-y-2 text-sm text-blue-900">
+              <li>본 사이트는 Google AdSense를 사용하여 광고를 게재합니다. Google 및 제3자 광고 사업자는 쿠키를 사용하여 사용자의 이전 방문 기록을 기반으로 광고를 게재할 수 있습니다.</li>
+              <li>사용자는 <a href="https://www.google.com/settings/ads" className="underline" target="_blank" rel="noopener noreferrer">Google 광고 설정</a>에서 맞춤형 광고를 관리하거나 해제할 수 있습니다.</li>
+              <li>Google의 개인정보처리방침: <a href="https://policies.google.com/privacy" className="underline" target="_blank" rel="noopener noreferrer">policies.google.com/privacy</a></li>
             </ul>
           </div>
           <p className="text-gray-700 leading-relaxed">
@@ -152,14 +152,14 @@ export default function PrivacyPolicyPage() {
         <section className="mb-8">
           <h2 className="text-2xl font-bold mb-4 text-gray-900">7. 개인정보의 파기</h2>
           <p className="text-gray-700 leading-relaxed">
-            {SITE_NAME}는 개인정보 보유기간의 경과, 처리목적 달성 등 개인정보가 불필요하게 되었을 때에는 지체없이 해당 개인정보를 파기합니다.
+            {SITE_NAME_EUN} 개인정보 보유기간의 경과, 처리목적 달성 등 개인정보가 불필요하게 되었을 때에는 지체없이 해당 개인정보를 파기합니다.
           </p>
         </section>
 
         <section className="mb-8">
           <h2 className="text-2xl font-bold mb-4 text-gray-900">8. 개인정보 보호책임자</h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            {SITE_NAME}는 개인정보 처리에 관한 업무를 총괄해서 책임지고, 개인정보 처리와 관련한 정보주체의 불만처리 및 피해구제 등을 위하여 
+            {SITE_NAME_EUN} 개인정보 처리에 관한 업무를 총괄해서 책임지고, 개인정보 처리와 관련한 정보주체의 불만처리 및 피해구제 등을 위하여 
             아래와 같이 개인정보 보호책임자를 지정하고 있습니다.
           </p>
           <div className="bg-gray-50 p-6 rounded-lg">
