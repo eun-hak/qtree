@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { ChevronRight, Target, Users, BookOpen, Shield, PencilLine } from "lucide-react";
-import { pageTitle, SITE_DESCRIPTION, SITE_NAME, SITE_NAME_EUN } from "../../lib/site";
+import { pageTitle, SITE_DESCRIPTION, SITE_NAME, SITE_NAME_EUN, SITE_NAME_EUI } from "../../lib/site";
 
 export const metadata = {
   title: pageTitle("사이트 소개"),
@@ -42,9 +42,9 @@ export default function AboutPage() {
             <h2 className="text-xl font-bold text-gray-900 m-0">사이트 목적</h2>
           </div>
           <p className="text-gray-700 leading-relaxed mb-3 text-sm">
-            {SITE_NAME_EUN} 집안에서 자주 겪는 청소·세탁·가전·공간 관리 문제를{" "}
-            <strong>직접 해보고 단계별로 정리</strong>하는 것을 목표로 합니다.
-            준비물, 순서, 주의할 점을 골라 바로 따라 할 수 있게 씁니다.
+            {SITE_NAME_EUN} 집안에서 자주 겪는 청소·세탁·가전·공간 관리 문제를
+            직접 해보고 단계별로 정리하는 것을 목표로 합니다. 준비물, 순서,
+            주의할 점을 골라 바로 따라 할 수 있게 씁니다.
           </p>
           <p className="text-gray-700 leading-relaxed text-sm">
             같은 세제라도 재질·오염 종류에 따라 방법이 달라 막막한 경우가
@@ -108,7 +108,7 @@ export default function AboutPage() {
           <p className="text-gray-700 leading-relaxed mb-3 text-sm">
             {SITE_NAME_EUN} 1인 가구·신혼·반려동물 가정 등에서 실제로 살림을 해 온
             운영자와 편집팀이 함께 만듭니다. 새로 다루는 청소·세탁 방법은
-            글로 정리하기 전에 <strong>직접 집에서 따라 해 보는 것</strong>을 원칙으로 합니다.
+            글로 정리하기 전에 직접 집에서 따라 해보는 것을 원칙으로 합니다.
           </p>
           <p className="text-gray-700 leading-relaxed mb-3 text-sm">
             그래서 각 글에는 단순 정보뿐 아니라 <strong>실제로 해 보니 효과가 있었던
@@ -160,10 +160,10 @@ export default function AboutPage() {
             <h2 className="text-xl font-bold text-gray-900 m-0">운영 안내</h2>
           </div>
           <p className="text-gray-700 leading-relaxed mb-3 text-sm">
-            {SITE_NAME}의 안내는 작성 시점에 직접 시도한 일반적인 방법을
+            {SITE_NAME_EUI} 안내는 작성 시점에 직접 시도한 일반적인 방법을
             바탕으로 합니다. 제품·재질·오염 상태에 따라 결과가 달라질 수
-            있으니, 민감한 소재는 눈에 띄지 않는 곳에서 먼저 테스트하고{" "}
-            <strong>제품 공식 안내</strong>를 함께 확인해 주세요.
+            있으니, 민감한 소재는 눈에 띄지 않는 곳에서 먼저 테스트하고
+            제품 공식 안내를 함께 확인해 주세요.
           </p>
           <p className="text-gray-700 leading-relaxed text-sm">
             오류나 보완이 필요한 내용이 있으면 알려주시면 검토 후 반영하겠습니다.

@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { ChevronRight } from 'lucide-react';
-import { pageTitle, SITE_EMAIL, SITE_NAME, SITE_NAME_EUN } from '../../lib/site';
+import { pageTitle, SITE_EMAIL, SITE_NAME, SITE_NAME_E, SITE_NAME_EUN } from '../../lib/site';
 
 export const metadata = {
   title: pageTitle('개인정보 처리 방침'),
@@ -140,7 +140,7 @@ export default function PrivacyPolicyPage() {
         <section className="mb-8">
           <h2 className="text-2xl font-bold mb-4 text-gray-900">6. 정보주체의 권리·의무 및 행사방법</h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            정보주체는 {SITE_NAME}에 대해 언제든지 다음 각 호의 개인정보 보호 관련 권리를 행사할 수 있습니다:
+            정보주체는 {SITE_NAME_E} 대해 언제든지 다음 각 호의 개인정보 보호 관련 권리를 행사할 수 있습니다:
           </p>
           <ul className="list-disc pl-6 space-y-2 text-gray-700">
             <li>개인정보 열람 요구</li>

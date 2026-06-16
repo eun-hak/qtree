@@ -46,65 +46,69 @@ export default function CookiesPage() {
         <section className="mb-8">
           <h2 className="text-2xl font-bold mb-4 text-gray-900">3. 사용하는 쿠키의 종류</h2>
 
-          <div className="bg-gray-50 p-6 rounded-lg mb-4">
+          <div className="not-prose bg-gray-50 p-6 rounded-lg mb-4">
             <h3 className="font-semibold mb-3 text-gray-900">성능 및 분석 쿠키</h3>
-            <p className="text-gray-700 mb-3">
+            <p className="text-gray-700 mb-3 text-base leading-relaxed">
               방문자가 웹사이트를 이용하는 방식을 수집하여 서비스 개선에 활용합니다.
             </p>
-            <table className="w-full text-sm">
-              <thead>
-                <tr className="border-b">
-                  <th className="text-left py-2 text-gray-900">쿠키 이름</th>
-                  <th className="text-left py-2 text-gray-900">목적</th>
-                  <th className="text-left py-2 text-gray-900">보관 기간</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="border-b">
-                  <td className="py-2 text-gray-700">_ga</td>
-                  <td className="py-2 text-gray-700">Google Analytics - 방문자 구분</td>
-                  <td className="py-2 text-gray-700">2년</td>
-                </tr>
-                <tr className="border-b">
-                  <td className="py-2 text-gray-700">_gid</td>
-                  <td className="py-2 text-gray-700">Google Analytics - 방문자 구분</td>
-                  <td className="py-2 text-gray-700">24시간</td>
-                </tr>
-              </tbody>
-            </table>
+            <div className="overflow-x-auto">
+              <table className="w-full min-w-[32rem] border-collapse text-sm">
+                <thead>
+                  <tr className="border-b border-gray-300 bg-gray-100">
+                    <th className="text-left py-2 px-3 font-semibold text-gray-900 w-[22%]">쿠키 이름</th>
+                    <th className="text-left py-2 px-3 font-semibold text-gray-900">목적</th>
+                    <th className="text-left py-2 px-3 font-semibold text-gray-900 w-[18%]">보관 기간</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="border-b border-gray-200">
+                    <td className="py-2 px-3 text-gray-700 font-mono">_ga</td>
+                    <td className="py-2 px-3 text-gray-700">Google Analytics - 방문자 구분</td>
+                    <td className="py-2 px-3 text-gray-700">2년</td>
+                  </tr>
+                  <tr className="border-b border-gray-200">
+                    <td className="py-2 px-3 text-gray-700 font-mono">_gid</td>
+                    <td className="py-2 px-3 text-gray-700">Google Analytics - 방문자 구분</td>
+                    <td className="py-2 px-3 text-gray-700">24시간</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
 
-          <div className="bg-gray-50 p-6 rounded-lg">
+          <div className="not-prose bg-gray-50 p-6 rounded-lg">
             <h3 className="font-semibold mb-3 text-gray-900">광고 쿠키 (Google AdSense)</h3>
-            <p className="text-gray-700 mb-3">
+            <p className="text-gray-700 mb-3 text-base leading-relaxed">
               Google AdSense는 사용자의 이전 방문 정보를 기반으로 관련성 높은 광고를 제공하기 위해 쿠키를 사용합니다.
             </p>
-            <table className="w-full text-sm">
-              <thead>
-                <tr className="border-b">
-                  <th className="text-left py-2 text-gray-900">쿠키 이름</th>
-                  <th className="text-left py-2 text-gray-900">목적</th>
-                  <th className="text-left py-2 text-gray-900">보관 기간</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="border-b">
-                  <td className="py-2 text-gray-700">_gads</td>
-                  <td className="py-2 text-gray-700">Google AdSense - 광고 게재</td>
-                  <td className="py-2 text-gray-700">13개월</td>
-                </tr>
-                <tr className="border-b">
-                  <td className="py-2 text-gray-700">_gac_*</td>
-                  <td className="py-2 text-gray-700">Google 광고 캠페인 정보</td>
-                  <td className="py-2 text-gray-700">90일</td>
-                </tr>
-                <tr className="border-b">
-                  <td className="py-2 text-gray-700">id</td>
-                  <td className="py-2 text-gray-700">Google 맞춤형 광고 - 관심사 기반 식별</td>
-                  <td className="py-2 text-gray-700">13개월</td>
-                </tr>
-              </tbody>
-            </table>
+            <div className="overflow-x-auto">
+              <table className="w-full min-w-[32rem] border-collapse text-sm">
+                <thead>
+                  <tr className="border-b border-gray-300 bg-gray-100">
+                    <th className="text-left py-2 px-3 font-semibold text-gray-900 w-[22%]">쿠키 이름</th>
+                    <th className="text-left py-2 px-3 font-semibold text-gray-900">목적</th>
+                    <th className="text-left py-2 px-3 font-semibold text-gray-900 w-[18%]">보관 기간</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="border-b border-gray-200">
+                    <td className="py-2 px-3 text-gray-700 font-mono">_gads</td>
+                    <td className="py-2 px-3 text-gray-700">Google AdSense - 광고 게재</td>
+                    <td className="py-2 px-3 text-gray-700">13개월</td>
+                  </tr>
+                  <tr className="border-b border-gray-200">
+                    <td className="py-2 px-3 text-gray-700 font-mono">_gac_*</td>
+                    <td className="py-2 px-3 text-gray-700">Google 광고 캠페인 정보</td>
+                    <td className="py-2 px-3 text-gray-700">90일</td>
+                  </tr>
+                  <tr className="border-b border-gray-200">
+                    <td className="py-2 px-3 text-gray-700 font-mono">id</td>
+                    <td className="py-2 px-3 text-gray-700">Google 맞춤형 광고 - 관심사 기반 식별</td>
+                    <td className="py-2 px-3 text-gray-700">13개월</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </section>
 

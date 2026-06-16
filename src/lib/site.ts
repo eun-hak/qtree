@@ -11,6 +11,12 @@ export const SITE_NAME = "큐트리";
 /** JSX `{SITE_NAME}는` 패턴의 띄어쓰기(큐트리 는) 방지 */
 export const SITE_NAME_EUN = `${SITE_NAME}는`;
 
+/** JSX `{SITE_NAME}의` 패턴의 띄어쓰기(큐트리 의) 방지 */
+export const SITE_NAME_EUI = `${SITE_NAME}의`;
+
+/** JSX `{SITE_NAME}에` 패턴의 띄어쓰기(큐트리 에) 방지 */
+export const SITE_NAME_E = `${SITE_NAME}에`;
+
 export const SITE_NAME_SHORT = "큐트리";
 
 export const SITE_TAGLINE = "생활 고민을 단계별로 해결";
