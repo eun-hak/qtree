@@ -6,6 +6,7 @@ import { pageTitle, SITE_DESCRIPTION, SITE_NAME, SITE_NAME_EUN, SITE_NAME_EUI } 
 export const metadata = {
   title: pageTitle("사이트 소개"),
   description: `${SITE_NAME_EUN} 주방·욕실·세탁·거실 등 집안 청소와 세탁, 가전·공간 관리를 단계별로 정리하는 실전 생활 가이드입니다.`,
+  alternates: { canonical: "/about" },
   openGraph: {
     title: pageTitle("사이트 소개"),
     description: SITE_DESCRIPTION,
@@ -43,8 +44,8 @@ export default function AboutPage() {
           </div>
           <p className="text-gray-700 leading-relaxed mb-3 text-sm">
             {SITE_NAME_EUN} 집안에서 자주 겪는 청소·세탁·가전·공간 관리 문제를
-            직접 해보고 단계별로 정리하는 것을 목표로 합니다. 준비물, 순서,
-            주의할 점을 골라 바로 따라 할 수 있게 씁니다.
+            세제·재질의 원리와 안전 기준으로 검증해 단계별로 정리하는 것을
+            목표로 합니다. 준비물, 순서, 주의할 점을 골라 바로 따라 할 수 있게 씁니다.
           </p>
           <p className="text-gray-700 leading-relaxed text-sm">
             같은 세제라도 재질·오염 종류에 따라 방법이 달라 막막한 경우가
@@ -106,19 +107,19 @@ export default function AboutPage() {
             </h2>
           </div>
           <p className="text-gray-700 leading-relaxed mb-3 text-sm">
-            {SITE_NAME_EUN} 1인 가구·신혼·반려동물 가정 등에서 실제로 살림을 해 온
-            운영자와 편집팀이 함께 만듭니다. 새로 다루는 청소·세탁 방법은
-            글로 정리하기 전에 직접 집에서 따라 해보는 것을 원칙으로 합니다.
+            {SITE_NAME_EUI} 글은 편집팀이 제조사 사용설명서와 공개된 화학·안전
+            자료를 교차 확인해 정리합니다. 같은 오염이라도 재질과 세제의 성질에
+            따라 방법이 달라지므로, 단순 정보 나열이 아니라 <strong>왜 그렇게
+            해야 하는지</strong>의 원리를 함께 설명합니다.
           </p>
           <p className="text-gray-700 leading-relaxed mb-3 text-sm">
-            그래서 각 글에는 단순 정보뿐 아니라 <strong>실제로 해 보니 효과가 있었던
-            순서</strong>, 처음에 실패했던 부분, 재질을 상하게 했던 실수처럼
-            직접 겪은 시행착오를 함께 담으려고 합니다. 제품 사용법이 헷갈릴 때는
-            제조사 공식 안내와 성분 표기를 교차 확인한 뒤 반영합니다.
+            그래서 각 글에는 준비물·순서뿐 아니라 <strong>재질별 대응 비교표</strong>,
+            <strong>섞으면 위험한 세제 같은 안전 주의</strong>, 자주 묻는 질문을
+            함께 담아, 따라 하기 전에 위험과 한계를 먼저 알 수 있게 했습니다.
           </p>
           <ul className="space-y-2 text-gray-700 text-sm">
             <li>
-              <strong>직접 시험</strong> — 가능한 방법은 집안 환경에서 먼저 따라 해 보고 기록
+              <strong>출처 검증</strong> — 제조사 안내·공개 자료로 교차 확인 후 작성
             </li>
             <li>
               <strong>정기 점검</strong> — 더 나은 방법을 찾으면 기존 글을 수정·보완

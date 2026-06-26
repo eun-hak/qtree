@@ -1,11 +1,12 @@
 import React from "react";
 import { Metadata } from "next";
 import { POSTS, CATEGORIES } from "../../data/mock";
+import { categoryIcon } from "../../data/category-icons";
 import { PostCard } from "../../components/blog/PostCard";
 import { ChevronRight } from "lucide-react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { pageTitle, SITE_NAME } from "../../../lib/site";
+import { pageTitle, SITE_NAME, siteUrl } from "../../../lib/site";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -27,6 +28,7 @@ export async function generateMetadata({
     title: pageTitle(category.name),
     description: category.description,
     keywords: [category.name, category.slug, "블로그", "카테고리", SITE_NAME],
+    alternates: { canonical: siteUrl(`/category/${category.slug}`) },
     openGraph: {
       title: pageTitle(category.name),
       description: category.description,
@@ -55,6 +57,8 @@ export default async function CategoryPage({ params }: PageProps) {
     notFound();
   }
 
+  const Icon = categoryIcon(category.slug);
+
   return (
     <div className="container mx-auto px-4 max-w-3xl py-8">
       <div className="mb-3 flex items-center text-xs text-gray-500">
@@ -68,8 +72,12 @@ export default async function CategoryPage({ params }: PageProps) {
       <div className="flex flex-col md:flex-row gap-8">
         <div className="flex-1">
           <div className="mb-6 border-b border-gray-100 pb-4">
-            <h1 className="text-2xl font-bold tracking-tight text-gray-900 mb-2">
+            <h1 className="flex items-center gap-2 text-2xl font-bold tracking-tight text-gray-900 mb-2">
+              <Icon className="h-6 w-6 text-emerald-600" />
               {category.name}
+              <span className="align-middle text-sm font-normal text-gray-400">
+                {category.count}편
+              </span>
             </h1>
             <p className="text-sm text-gray-500">{category.description}</p>
           </div>
@@ -95,9 +103,36 @@ export default async function CategoryPage({ params }: PageProps) {
               {category.name} 소개
             </h3>
             <p className="text-xs text-gray-600 leading-relaxed">
-              {category.description} {category.name} 관련 글을 모아 두었습니다.
-              새로운 생활 가이드가 추가될 때마다 업데이트합니다.
+              {category.description} 새로운 생활 가이드가 추가될 때마다
+              업데이트합니다.
             </p>
+          </div>
+
+          <div className="bg-white p-4 rounded-lg border border-gray-100">
+            <h3 className="font-bold text-gray-900 mb-3 text-sm">다른 카테고리</h3>
+            <ul className="space-y-2">
+              {CATEGORIES.map((c) => {
+                const CIcon = categoryIcon(c.slug);
+                return (
+                  <li key={c.slug}>
+                    <Link
+                      href={`/category/${c.slug}`}
+                      className={
+                        c.slug === category.slug
+                          ? "flex items-center justify-between text-xs font-semibold text-emerald-700"
+                          : "flex items-center justify-between text-xs text-gray-600 hover:text-emerald-600"
+                      }
+                    >
+                      <span className="flex items-center gap-1.5">
+                        <CIcon className="h-3.5 w-3.5" />
+                        {c.name}
+                      </span>
+                      <span className="text-gray-400">{c.count}</span>
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
           </div>
         </div>
       </div>

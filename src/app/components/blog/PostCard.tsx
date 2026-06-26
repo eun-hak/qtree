@@ -2,7 +2,7 @@ import React from 'react';
 import { Post, CATEGORIES, postPath } from '../../data/mock';
 import { Card, CardContent } from '../ui/card';
 import { Badge } from '../ui/badge';
-import { Clock, Eye } from 'lucide-react';
+import { Clock } from 'lucide-react';
 import { cn } from '../../../lib/utils';
 import Link from 'next/link';
 
@@ -46,7 +46,9 @@ export function PostCard({ post, variant = 'default', className }: PostCardProps
             </Badge>
             <div className="flex items-center text-xs text-gray-400 gap-2">
               <span className="flex items-center gap-1"><Clock size={11} /> {post.date}</span>
-              <span className="flex items-center gap-1"><Eye size={11} /> {post.views}</span>
+              {post.readingTime && (
+                <span className="flex items-center gap-1">{post.readingTime}분 읽기</span>
+              )}
             </div>
           </div>
 

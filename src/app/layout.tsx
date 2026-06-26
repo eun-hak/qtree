@@ -2,6 +2,7 @@ import React from "react";
 import type { Metadata } from "next";
 import Script from "next/script";
 import "../styles/tailwind.css";
+import "../styles/article.css";
 import { Header } from "./components/layout/Header";
 import { Footer } from "./components/layout/Footer";
 import { SuppressHydrationWarning } from "./components/SuppressHydrationWarning";
@@ -45,20 +46,12 @@ export const metadata: Metadata = {
     siteName: SITE_NAME,
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: `${SITE_NAME} — ${SITE_TAGLINE}`,
-      },
-    ],
+    // OG 이미지는 app/opengraph-image.tsx가 1200×630 PNG로 자동 생성합니다.
   },
   twitter: {
     card: "summary_large_image",
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
-    images: ["/og-image.png"],
   },
   robots: {
     index: true,

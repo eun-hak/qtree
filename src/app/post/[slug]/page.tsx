@@ -82,13 +82,13 @@ export default async function PostDetailPage({ params }: PageProps) {
         '@type': 'BlogPosting',
         headline: post.title,
         description: post.summary,
-        image: post.coverImage || siteUrl('/og-image.png'),
+        image: post.coverImage || siteUrl('/opengraph-image'),
         datePublished: post.date,
-        dateModified: post.date,
+        dateModified: post.updated || post.date,
         author: {
-            '@type': 'Person',
+            '@type': 'Organization',
             name: `${SITE_NAME} 편집팀`,
-            description: '집안 청소·세탁·생활관리 방법을 직접 시험해 보고 단계별로 기록하는 편집팀',
+            description: '집안 청소·세탁·생활관리 방법을 제조사 안내와 공개 자료로 검증해 단계별로 정리하는 편집팀',
             url: siteUrl('/about'),
         },
         publisher: {
@@ -96,7 +96,7 @@ export default async function PostDetailPage({ params }: PageProps) {
             name: SITE_NAME,
             logo: {
                 '@type': 'ImageObject',
-                url: siteUrl('/og-image.png'),
+                url: siteUrl('/opengraph-image'),
             },
         },
         mainEntityOfPage: {
@@ -108,12 +108,28 @@ export default async function PostDetailPage({ params }: PageProps) {
         wordCount: post.content.length,
     };
 
+    const faqJsonLd = post.faqs && post.faqs.length > 0 ? {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: post.faqs.map((f) => ({
+            '@type': 'Question',
+            name: f.q,
+            acceptedAnswer: { '@type': 'Answer', text: f.a },
+        })),
+    } : null;
+
     return (
         <>
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
             />
+            {faqJsonLd && (
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+                />
+            )}
 
             <article className="pb-8">
             <nav className="bg-gray-50 border-b border-gray-100" aria-label="Breadcrumb">
@@ -146,7 +162,9 @@ export default async function PostDetailPage({ params }: PageProps) {
                             {post.readingTime && (
                                 <span className="text-gray-500">{post.readingTime}분 읽기</span>
                             )}
-                            <span className="text-gray-400">조회 {post.views.toLocaleString()}</span>
+                            {post.updated && post.updated !== post.date && (
+                                <span className="text-gray-400">업데이트 {post.updated}</span>
+                            )}
                         </div>
 
                         <div className="flex items-center justify-center md:justify-start gap-2 text-xs text-gray-500">
@@ -157,7 +175,7 @@ export default async function PostDetailPage({ params }: PageProps) {
                             <span className="text-gray-300">·</span>
                             <span className="inline-flex items-center gap-1 text-emerald-700">
                                 <BadgeCheck className="h-3 w-3" />
-                                직접 시험 후 작성
+                                자료 검증·정리
                             </span>
                         </div>
 
@@ -195,6 +213,28 @@ export default async function PostDetailPage({ params }: PageProps) {
                         </div>
                     </section>
 
+                    {post.faqs && post.faqs.length > 0 && (
+                        <section className="mt-7">
+                            <h2 className="text-base md:text-lg font-bold text-gray-900 mb-3 pb-1.5 border-b border-gray-200">
+                                자주 묻는 질문
+                            </h2>
+                            <div className="divide-y divide-gray-100">
+                                {post.faqs.map((faq, idx) => (
+                                    <details key={idx} className="group py-3">
+                                        <summary className="flex items-start gap-2 cursor-pointer list-none text-sm font-semibold text-gray-900 marker:content-['']">
+                                            <span className="text-emerald-600 shrink-0">Q.</span>
+                                            <span className="flex-1">{faq.q}</span>
+                                            <ChevronRight className="h-4 w-4 text-gray-400 shrink-0 mt-0.5 transition-transform group-open:rotate-90" />
+                                        </summary>
+                                        <p className="mt-2 pl-5 text-sm text-gray-600 leading-relaxed">
+                                            {faq.a}
+                                        </p>
+                                    </details>
+                                ))}
+                            </div>
+                        </section>
+                    )}
+
                     <section className="mt-6 p-4 bg-white border border-gray-200 rounded-lg flex gap-3">
                         <div className="shrink-0">
                             <div className="h-10 w-10 rounded-full bg-emerald-100 flex items-center justify-center">
@@ -207,13 +247,11 @@ export default async function PostDetailPage({ params }: PageProps) {
                                 <BadgeCheck className="h-3.5 w-3.5 text-emerald-600" />
                             </div>
                             <p className="text-xs text-gray-600 leading-relaxed">
-                                이 글은 {SITE_NAME} 편집팀이 같은 방법을 실제 집안 환경에서 직접 따라 해 보고,
-                                효과가 있었던 순서와 실패했던 부분, 주의할 점을 정리한 내용입니다.
+                                이 글은 {SITE_NAME} 편집팀이 제조사 사용설명서와 공개된 화학·안전 자료를
+                                교차 확인해, 재질·오염 종류별 안전한 방법과 주의할 점을 정리한 내용입니다.
                                 제품·재질·오염 상태에 따라 결과가 다를 수 있어, 새로운 방법은 눈에 띄지 않는 곳에서
                                 먼저 시험해 보시길 권합니다.
-                                {post.date && (
-                                    <span className="block mt-1 text-gray-400">최종 점검: {post.date}</span>
-                                )}
+                                <span className="block mt-1 text-gray-400">최종 점검: {post.updated || post.date}</span>
                             </p>
                         </div>
                     </section>

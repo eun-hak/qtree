@@ -43,12 +43,14 @@ const nextConfig = {
         return [
             ...legacyPostRedirects,
             { source: '/post/4', destination: '/post/burnt-pot-baking-soda-clean', permanent: true },
-            { source: '/category/lookup', destination: '/category/services', permanent: true },
-            { source: '/category/apply', destination: '/category/services', permanent: true },
-            { source: '/category/tools', destination: '/category/services', permanent: true },
-            { source: '/category/guide', destination: '/category/services', permanent: true },
-            { source: '/category/strategy', destination: '/category/services', permanent: true },
-            { source: '/category/review', destination: '/category/services', permanent: true },
+            // 단일 카테고리(services) 시절 URL → 홈(매거진)으로 통합
+            { source: '/category/services', destination: '/', permanent: true },
+            { source: '/category/lookup', destination: '/', permanent: true },
+            { source: '/category/apply', destination: '/', permanent: true },
+            { source: '/category/tools', destination: '/', permanent: true },
+            { source: '/category/guide', destination: '/', permanent: true },
+            { source: '/category/strategy', destination: '/', permanent: true },
+            { source: '/category/review', destination: '/', permanent: true },
         ];
     },
 

@@ -1,0 +1,159 @@
+/* =========================================================================
+ * 큐트리 — 본문(레퍼런스형 콘텐츠) 전용 스타일
+ * .article-content 하위에만 적용됩니다. 표·콜아웃·요약·출처 블록을
+ * 모든 글에서 일관되게 렌더링하기 위한 컴포넌트 클래스 모음입니다.
+ * ========================================================================= */
+
+/* ---- TL;DR 요약 박스 ---------------------------------------------------- */
+.article-content .qt-tldr {
+  margin: 0 0 1.5rem;
+  padding: 1rem 1.1rem;
+  background: #ecfdf5;
+  border: 1px solid #a7f3d0;
+  border-radius: 0.75rem;
+}
+.article-content .qt-tldr-title {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0 0 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #047857;
+  text-transform: none;
+}
+.article-content .qt-tldr ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  list-style: disc;
+}
+.article-content .qt-tldr li {
+  margin: 0.2rem 0;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: #065f46;
+}
+
+/* ---- 비교/대응 표 ------------------------------------------------------- */
+.article-content .qt-table-wrap {
+  margin: 1.25rem 0;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.6rem;
+}
+.article-content table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  min-width: 460px;
+}
+.article-content thead th {
+  background: #f0fdf4;
+  color: #064e3b;
+  font-weight: 700;
+  text-align: left;
+  padding: 0.6rem 0.75rem;
+  border-bottom: 1px solid #d1fae5;
+  white-space: nowrap;
+}
+.article-content tbody td,
+.article-content tbody th {
+  padding: 0.6rem 0.75rem;
+  border-bottom: 1px solid #f1f5f9;
+  vertical-align: top;
+  color: #374151;
+}
+.article-content tbody th {
+  font-weight: 600;
+  color: #111827;
+  background: #fafafa;
+  white-space: nowrap;
+}
+.article-content tbody tr:last-child td,
+.article-content tbody tr:last-child th {
+  border-bottom: none;
+}
+
+/* ---- 콜아웃(주의 / 정보 / 금지) --------------------------------------- */
+.article-content .qt-callout {
+  margin: 1.25rem 0;
+  padding: 0.85rem 1rem;
+  border-radius: 0.6rem;
+  border: 1px solid;
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+.article-content .qt-callout p { margin: 0; font-size: 0.85rem; }
+.article-content .qt-callout p + p { margin-top: 0.4rem; }
+.article-content .qt-callout-title {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+/* 위험/금지 — 빨강 */
+.article-content .qt-danger {
+  background: #fef2f2;
+  border-color: #fecaca;
+  color: #7f1d1d;
+}
+.article-content .qt-danger .qt-callout-title { color: #b91c1c; }
+
+/* 주의 — 호박 */
+.article-content .qt-warn {
+  background: #fffbeb;
+  border-color: #fde68a;
+  color: #78350f;
+}
+.article-content .qt-warn .qt-callout-title { color: #b45309; }
+
+/* 정보/팁 — 청록 */
+.article-content .qt-info {
+  background: #f0f9ff;
+  border-color: #bae6fd;
+  color: #0c4a6e;
+}
+.article-content .qt-info .qt-callout-title { color: #0369a1; }
+
+/* ---- 단계 배지(선택) --------------------------------------------------- */
+.article-content .qt-step {
+  display: inline-block;
+  min-width: 1.4rem;
+  height: 1.4rem;
+  line-height: 1.4rem;
+  text-align: center;
+  margin-right: 0.4rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #fff;
+  background: #059669;
+  border-radius: 9999px;
+}
+
+/* ---- 참고/출처 --------------------------------------------------------- */
+.article-content .qt-sources {
+  margin: 1.75rem 0 0;
+  padding-top: 1rem;
+  border-top: 1px solid #e5e7eb;
+}
+.article-content .qt-sources-title {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #374151;
+  margin: 0 0 0.5rem;
+}
+.article-content .qt-sources ol {
+  margin: 0;
+  padding-left: 1.2rem;
+  list-style: decimal;
+}
+.article-content .qt-sources li {
+  font-size: 0.78rem;
+  line-height: 1.55;
+  color: #6b7280;
+  margin: 0.25rem 0;
+}
+.article-content .qt-sources a { color: #059669; }
