@@ -37,6 +37,9 @@ export async function generateMetadata({
   };
 }
 
+/** 목록에 없는 카테고리 slug는 존재하지 않는 페이지로 처리 (soft 404 방지) */
+export const dynamicParams = false;
+
 export async function generateStaticParams() {
   return CATEGORIES.map((category) => ({
     slug: category.slug,

@@ -49,6 +49,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     };
 }
 
+/**
+ * 목록에 없는 slug는 존재하지 않는 페이지로 처리합니다.
+ * (false로 두지 않으면 알 수 없는 slug가 200으로 응답해 'soft 404'가 되고,
+ *  주제 전환으로 사라진 옛 글 URL이 색인 오류로 남습니다.)
+ */
+export const dynamicParams = false;
+
 export async function generateStaticParams() {
     return POSTS.map((post) => ({
         slug: post.slug,
