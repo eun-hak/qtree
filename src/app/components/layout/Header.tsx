@@ -28,7 +28,7 @@ export function Header() {
 
   const navLinkClass = (active: boolean) =>
     cn(
-      "text-sm font-medium transition-colors hover:text-emerald-600",
+      "text-sm font-medium transition-colors hover:text-teal-600",
       active ? "text-gray-900" : "text-gray-500"
     );
 
@@ -36,7 +36,7 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
       <div className="container mx-auto px-4 h-12 flex items-center justify-between max-w-5xl">
         <Link href="/" className="flex items-center gap-1.5 shrink-0">
-          <div className="bg-emerald-600 text-white w-7 h-7 rounded-md font-bold text-sm flex items-center justify-center aspect-square shrink-0">Q</div>
+          <div className="bg-teal-600 text-white w-7 h-7 rounded-md font-bold text-sm flex items-center justify-center aspect-square shrink-0">Q</div>
           <span className="text-base font-bold tracking-tight text-gray-900">{SITE_NAME}</span>
         </Link>
 
@@ -104,7 +104,7 @@ export function Header() {
                   className="flex items-center justify-between text-sm font-medium text-left py-2 border-b border-gray-100"
                 >
                   <span className="flex items-center gap-2">
-                    <Icon className="h-4 w-4 text-emerald-600" />
+                    <Icon className="h-4 w-4 text-teal-600" />
                     {cat.name}
                   </span>
                   <span className="text-xs text-gray-400">{cat.count}</span>

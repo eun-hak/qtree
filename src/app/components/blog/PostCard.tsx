@@ -23,10 +23,10 @@ export function PostCard({ post, variant = 'default', className }: PostCardProps
           className={cn("group cursor-pointer py-3 md:py-3.5 border-b border-gray-100 last:border-0 hover:bg-gray-50/50 transition-colors px-1 rounded-sm", className)}
         >
           <div className="flex items-center gap-2 mb-1">
-            <span className="text-xs md:text-sm font-medium text-emerald-600">{category?.name}</span>
+            <span className="text-xs md:text-sm font-medium text-teal-600">{category?.name}</span>
             <span className="text-xs md:text-sm text-gray-400">{post.date}</span>
           </div>
-          <h3 className="text-base md:text-lg font-semibold text-gray-900 group-hover:text-emerald-700 transition-colors line-clamp-2 md:line-clamp-1 leading-snug">
+          <h3 className="text-base md:text-lg font-semibold text-gray-900 group-hover:text-teal-700 transition-colors line-clamp-2 md:line-clamp-1 leading-snug">
             {post.title}
           </h3>
         </div>
@@ -41,7 +41,7 @@ export function PostCard({ post, variant = 'default', className }: PostCardProps
       >
         <CardContent className="p-3 sm:p-4">
           <div className="flex items-center gap-2 mb-2">
-            <Badge variant="secondary" className="bg-emerald-50 text-emerald-700 hover:bg-emerald-100 font-normal rounded px-1.5 py-0 text-xs">
+            <Badge variant="secondary" className="bg-teal-50 text-teal-700 hover:bg-teal-100 font-normal rounded px-1.5 py-0 text-xs">
               {category?.name || post.category}
             </Badge>
             <div className="flex items-center text-xs text-gray-400 gap-2">
@@ -52,7 +52,7 @@ export function PostCard({ post, variant = 'default', className }: PostCardProps
             </div>
           </div>
 
-          <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-1 leading-snug group-hover:text-emerald-700">
+          <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-1 leading-snug group-hover:text-teal-700">
             {post.title}
           </h3>
 

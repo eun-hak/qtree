@@ -14,7 +14,7 @@ export default function CookiesPage() {
       {/* Breadcrumb */}
       <div className="mb-8">
         <div className="flex items-center text-sm text-gray-500">
-          <Link href="/" className="hover:text-emerald-600 cursor-pointer">홈</Link>
+          <Link href="/" className="hover:text-teal-600 cursor-pointer">홈</Link>
           <ChevronRight className="h-4 w-4 mx-1" />
           <span className="font-medium text-gray-900">쿠키 정책</span>
         </div>
@@ -119,7 +119,7 @@ export default function CookiesPage() {
           </p>
           <ul className="list-disc pl-6 space-y-2 text-gray-700">
             <li><strong>Google Analytics:</strong> 웹사이트 방문 통계 분석</li>
-            <li><strong>Google AdSense:</strong> 맞춤형 광고 제공. 사용자는 <a href="https://www.google.com/settings/ads" className="text-emerald-600 underline" target="_blank" rel="noopener noreferrer">Google 광고 설정</a>에서 맞춤형 광고를 해제할 수 있습니다.</li>
+            <li><strong>Google AdSense:</strong> 맞춤형 광고 제공. 사용자는 <a href="https://www.google.com/settings/ads" className="text-teal-600 underline" target="_blank" rel="noopener noreferrer">Google 광고 설정</a>에서 맞춤형 광고를 해제할 수 있습니다.</li>
           </ul>
         </section>
 
@@ -130,7 +130,7 @@ export default function CookiesPage() {
             다만, 쿠키를 차단할 경우 일부 서비스 이용에 제한이 있을 수 있습니다.
           </p>
 
-          <div className="bg-emerald-50 border border-emerald-100 p-6 rounded-lg mb-4">
+          <div className="bg-teal-50 border border-teal-100 p-6 rounded-lg mb-4">
             <h3 className="font-semibold mb-3 text-gray-900">주요 브라우저별 쿠키 설정 방법</h3>
             <ul className="space-y-2 text-gray-700 text-sm">
               <li><strong>Chrome:</strong> 설정 &gt; 개인정보 및 보안 &gt; 쿠키 및 기타 사이트 데이터</li>

@@ -40,7 +40,7 @@ export default function SearchPage() {
     <div className="container mx-auto px-4 max-w-3xl py-8">
       <div className="mb-5">
         <div className="flex items-center text-xs text-gray-500">
-          <Link href="/" className="hover:text-emerald-600 cursor-pointer">홈</Link>
+          <Link href="/" className="hover:text-teal-600 cursor-pointer">홈</Link>
           <ChevronRight className="h-3 w-3 mx-1" />
           <span className="font-medium text-gray-900">검색</span>
         </div>
@@ -61,14 +61,14 @@ export default function SearchPage() {
             placeholder="제목, 내용, 태그로 검색..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="pl-10 h-10 text-sm bg-white border-gray-200 focus:border-emerald-500"
+            className="pl-10 h-10 text-sm bg-white border-gray-200 focus:border-teal-500"
             autoFocus
           />
         </div>
         {searchQuery.trim() && (
           <p className="mt-2 text-sm text-gray-600">
             <span className="font-medium">&quot;{searchQuery}&quot;</span> 검색 결과:
-            <span className="ml-1 text-emerald-600 font-bold">{filteredPosts.length}개</span>
+            <span className="ml-1 text-teal-600 font-bold">{filteredPosts.length}개</span>
           </p>
         )}
       </div>
@@ -89,11 +89,11 @@ export default function SearchPage() {
             </p>
             <div className="flex flex-wrap gap-1.5 justify-center">
               <span className="text-xs text-gray-500">추천 키워드:</span>
-              {['베이킹소다', '곰팡이', '얼룩 제거', '세탁', '욕실 청소'].map(keyword => (
+              {['늑연골염', '어깨 통증', '전방경사', '위염', '수면'].map(keyword => (
                 <Badge
                   key={keyword}
                   variant="secondary"
-                  className="cursor-pointer hover:bg-emerald-100 text-xs"
+                  className="cursor-pointer hover:bg-teal-100 text-xs"
                   onClick={() => setSearchQuery(keyword)}
                 >
                   {keyword}
@@ -111,11 +111,11 @@ export default function SearchPage() {
           </p>
           <div className="flex flex-wrap gap-1.5 justify-center">
             <span className="text-xs text-gray-500">인기 검색어:</span>
-            {['구연산', '락스', '주방 청소', '수건 냄새', '패딩 세탁'].map(keyword => (
+            {['염증', '허리 통증', '식도염', '식습관', '회복'].map(keyword => (
               <Badge
                 key={keyword}
                 variant="secondary"
-                className="cursor-pointer hover:bg-emerald-100 text-xs"
+                className="cursor-pointer hover:bg-teal-100 text-xs"
                 onClick={() => setSearchQuery(keyword)}
               >
                 {keyword}

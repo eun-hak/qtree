@@ -8,7 +8,7 @@ import { Button } from '../../components/ui/button';
 import { ChevronRight, Calendar, Tag, Share2, Facebook, Twitter, Linkedin, BadgeCheck, PencilLine } from 'lucide-react';
 import Link from 'next/link';
 import { notFound, redirect } from 'next/navigation';
-import { SITE_NAME, siteUrl } from '../../../lib/site';
+import { SITE_NAME, siteUrl, SITE_AUTHOR, SITE_AUTHOR_BIO, MEDICAL_DISCLAIMER } from '../../../lib/site';
 
 interface PageProps {
     params: Promise<{ slug: string }>;
@@ -86,9 +86,9 @@ export default async function PostDetailPage({ params }: PageProps) {
         datePublished: post.date,
         dateModified: post.updated || post.date,
         author: {
-            '@type': 'Organization',
-            name: `${SITE_NAME} 편집팀`,
-            description: '집안 청소·세탁·생활관리 방법을 제조사 안내와 공개 자료로 검증해 단계별로 정리하는 편집팀',
+            '@type': 'Person',
+            name: SITE_AUTHOR,
+            description: SITE_AUTHOR_BIO,
             url: siteUrl('/about'),
         },
         publisher: {
@@ -135,9 +135,9 @@ export default async function PostDetailPage({ params }: PageProps) {
             <nav className="bg-gray-50 border-b border-gray-100" aria-label="Breadcrumb">
                 <div className="container mx-auto px-4 max-w-5xl py-2">
                     <div className="flex items-center text-xs text-gray-500 overflow-x-auto whitespace-nowrap">
-                        <Link href="/" className="hover:text-emerald-600 cursor-pointer">홈</Link>
+                        <Link href="/" className="hover:text-teal-600 cursor-pointer">홈</Link>
                         <ChevronRight className="h-3 w-3 mx-1 flex-shrink-0" />
-                        <Link href={`/category/${post.category}`} className="hover:text-emerald-600 cursor-pointer">
+                        <Link href={`/category/${post.category}`} className="hover:text-teal-600 cursor-pointer">
                             {category?.name || post.category}
                         </Link>
                         <ChevronRight className="h-3 w-3 mx-1 flex-shrink-0" />
@@ -152,7 +152,7 @@ export default async function PostDetailPage({ params }: PageProps) {
                     <header className="mb-4 text-center md:text-left">
                         <div className="mb-2 flex flex-wrap gap-1.5 items-center justify-center md:justify-start text-xs">
                             <Link href={`/category/${post.category}`}>
-                                <Badge className="bg-emerald-100 text-emerald-800 hover:bg-emerald-200 cursor-pointer text-xs px-1.5 py-0">
+                                <Badge className="bg-teal-100 text-teal-800 hover:bg-teal-200 cursor-pointer text-xs px-1.5 py-0">
                                     {category?.name}
                                 </Badge>
                             </Link>
@@ -169,13 +169,13 @@ export default async function PostDetailPage({ params }: PageProps) {
 
                         <div className="flex items-center justify-center md:justify-start gap-2 text-xs text-gray-500">
                             <span className="inline-flex items-center gap-1 font-medium text-gray-700">
-                                <PencilLine className="h-3 w-3 text-emerald-600" />
-                                {SITE_NAME} 편집팀
+                                <PencilLine className="h-3 w-3 text-teal-600" />
+                                {SITE_AUTHOR}
                             </span>
                             <span className="text-gray-300">·</span>
-                            <span className="inline-flex items-center gap-1 text-emerald-700">
+                            <span className="inline-flex items-center gap-1 text-teal-700">
                                 <BadgeCheck className="h-3 w-3" />
-                                자료 검증·정리
+                                직접 겪은 기록
                             </span>
                         </div>
 
@@ -207,9 +207,14 @@ export default async function PostDetailPage({ params }: PageProps) {
                             [&_ol]:my-2 [&_ol]:ml-4 [&_ol]:list-decimal [&_ol]:space-y-1
                             [&_li]:text-sm [&_li]:text-gray-700 [&_li]:leading-relaxed
                             [&_strong]:font-semibold [&_strong]:text-gray-900
-                            [&_a]:text-emerald-600 [&_a]:no-underline hover:[&_a]:underline
+                            [&_a]:text-teal-600 [&_a]:no-underline hover:[&_a]:underline
                             [&_img]:my-4 [&_img]:w-full [&_img]:max-w-full [&_img]:h-auto [&_img]:max-h-[400px] [&_img]:object-cover [&_img]:rounded-lg [&_img]:border [&_img]:border-gray-200">
                             <div dangerouslySetInnerHTML={{ __html: post.content }} />
+                        </div>
+
+                        {/* 의료 면책 고지 — 건강(YMYL) 글 필수 */}
+                        <div className="qt-disclaimer">
+                            <strong>알아두세요.</strong> {MEDICAL_DISCLAIMER}
                         </div>
                     </section>
 
@@ -222,7 +227,7 @@ export default async function PostDetailPage({ params }: PageProps) {
                                 {post.faqs.map((faq, idx) => (
                                     <details key={idx} className="group py-3">
                                         <summary className="flex items-start gap-2 cursor-pointer list-none text-sm font-semibold text-gray-900 marker:content-['']">
-                                            <span className="text-emerald-600 shrink-0">Q.</span>
+                                            <span className="text-teal-600 shrink-0">Q.</span>
                                             <span className="flex-1">{faq.q}</span>
                                             <ChevronRight className="h-4 w-4 text-gray-400 shrink-0 mt-0.5 transition-transform group-open:rotate-90" />
                                         </summary>
@@ -237,32 +242,29 @@ export default async function PostDetailPage({ params }: PageProps) {
 
                     <section className="mt-6 p-4 bg-white border border-gray-200 rounded-lg flex gap-3">
                         <div className="shrink-0">
-                            <div className="h-10 w-10 rounded-full bg-emerald-100 flex items-center justify-center">
-                                <PencilLine className="h-5 w-5 text-emerald-600" />
+                            <div className="h-10 w-10 rounded-full bg-teal-100 flex items-center justify-center">
+                                <PencilLine className="h-5 w-5 text-teal-600" />
                             </div>
                         </div>
                         <div className="min-w-0">
                             <div className="flex items-center gap-1.5 mb-0.5">
-                                <span className="font-semibold text-gray-900 text-sm">{SITE_NAME} 편집팀</span>
-                                <BadgeCheck className="h-3.5 w-3.5 text-emerald-600" />
+                                <span className="font-semibold text-gray-900 text-sm">{SITE_AUTHOR}</span>
+                                <BadgeCheck className="h-3.5 w-3.5 text-teal-600" />
                             </div>
                             <p className="text-xs text-gray-600 leading-relaxed">
-                                이 글은 {SITE_NAME} 편집팀이 제조사 사용설명서와 공개된 화학·안전 자료를
-                                교차 확인해, 재질·오염 종류별 안전한 방법과 주의할 점을 정리한 내용입니다.
-                                제품·재질·오염 상태에 따라 결과가 다를 수 있어, 새로운 방법은 눈에 띄지 않는 곳에서
-                                먼저 시험해 보시길 권합니다.
+                                {SITE_AUTHOR_BIO}
                                 <span className="block mt-1 text-gray-400">최종 점검: {post.updated || post.date}</span>
                             </p>
                         </div>
                     </section>
 
-                    <section className="mt-5 p-3 bg-emerald-50 border border-emerald-200 rounded-lg">
-                        <h3 className="font-semibold text-emerald-900 mb-1 text-xs">궁금한 점이 있으신가요?</h3>
-                        <p className="text-xs text-emerald-800 mb-2 leading-relaxed">
+                    <section className="mt-5 p-3 bg-teal-50 border border-teal-200 rounded-lg">
+                        <h3 className="font-semibold text-teal-900 mb-1 text-xs">궁금한 점이 있으신가요?</h3>
+                        <p className="text-xs text-teal-800 mb-2 leading-relaxed">
                             이 글에 대한 질문이나 정정 요청이 있으시다면 언제든 연락주세요.
                         </p>
                         <Link href="/contact">
-                            <Button variant="default" size="sm" className="bg-emerald-600 hover:bg-emerald-700 text-xs h-7 px-3">
+                            <Button variant="default" size="sm" className="bg-teal-600 hover:bg-teal-700 text-xs h-7 px-3">
                                 문의하기
                             </Button>
                         </Link>
@@ -290,7 +292,7 @@ export default async function PostDetailPage({ params }: PageProps) {
                             {relatedPosts.slice(0, 3).map((p) => (
                                 <Link key={p.slug} href={postPath(p)}>
                                     <div className="group cursor-pointer">
-                                        <h4 className="text-xs font-medium text-gray-900 group-hover:text-emerald-600 leading-snug mb-0.5">{p.title}</h4>
+                                        <h4 className="text-xs font-medium text-gray-900 group-hover:text-teal-600 leading-snug mb-0.5">{p.title}</h4>
                                         <span className="text-xs text-gray-400">{p.date}</span>
                                     </div>
                                 </Link>

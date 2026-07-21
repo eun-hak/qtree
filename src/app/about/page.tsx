@@ -1,11 +1,20 @@
 import React from "react";
 import Link from "next/link";
-import { ChevronRight, Target, Users, BookOpen, Shield, PencilLine } from "lucide-react";
-import { pageTitle, SITE_DESCRIPTION, SITE_NAME, SITE_NAME_EUN, SITE_NAME_EUI } from "../../lib/site";
+import { ChevronRight, Target, Flame, Shield, PencilLine, AlertTriangle } from "lucide-react";
+import {
+  pageTitle,
+  SITE_DESCRIPTION,
+  SITE_NAME,
+  SITE_NAME_EUN,
+  SITE_AUTHOR,
+  SITE_AUTHOR_BIO,
+  MEDICAL_DISCLAIMER,
+} from "../../lib/site";
+import { ALL_CATEGORY_DEFS } from "../data/mock";
 
 export const metadata = {
   title: pageTitle("사이트 소개"),
-  description: `${SITE_NAME_EUN} 주방·욕실·세탁·거실 등 집안 청소와 세탁, 가전·공간 관리를 단계별로 정리하는 실전 생활 가이드입니다.`,
+  description: `${SITE_NAME_EUN} 운동과 일상에서 겪은 염증·통증을 병원 진료와 함께 기록하는 개인 사이트입니다.`,
   alternates: { canonical: "/about" },
   openGraph: {
     title: pageTitle("사이트 소개"),
@@ -19,7 +28,7 @@ export default function AboutPage() {
     <div className="container mx-auto px-4 max-w-3xl py-8">
       <div className="mb-5">
         <div className="flex items-center text-xs text-gray-500">
-          <Link href="/" className="hover:text-emerald-600 cursor-pointer">
+          <Link href="/" className="hover:text-teal-600 cursor-pointer">
             홈
           </Link>
           <ChevronRight className="h-3 w-3 mx-1" />
@@ -32,166 +41,130 @@ export default function AboutPage() {
           {SITE_NAME} 소개
         </h1>
         <p className="text-base text-gray-600 mb-8 leading-relaxed">
-          {SITE_DESCRIPTION}
+          운동과 일상에서 겪은 염증·통증을 병원 진료와 함께 기록하는
+          개인 사이트입니다.
         </p>
 
-        <section className="mb-8">
-          <div className="flex items-center gap-2 mb-4">
-            <div className="bg-emerald-100 p-2 rounded-md">
-              <Target className="h-4 w-4 text-emerald-600" />
-            </div>
-            <h2 className="text-xl font-bold text-gray-900 m-0">사이트 목적</h2>
-          </div>
-          <p className="text-gray-700 leading-relaxed mb-3 text-sm">
-            {SITE_NAME_EUN} 집안에서 자주 겪는 청소·세탁·가전·공간 관리 문제를
-            세제·재질의 원리와 안전 기준으로 검증해 단계별로 정리하는 것을
-            목표로 합니다. 준비물, 순서, 주의할 점을 골라 바로 따라 할 수 있게 씁니다.
-          </p>
-          <p className="text-gray-700 leading-relaxed text-sm">
-            같은 세제라도 재질·오염 종류에 따라 방법이 달라 막막한 경우가
-            많습니다. 화학 원리와 실제 작업 순서를 함께 설명해, 안전하고
-            효율적으로 해결할 수 있도록 돕습니다.
-          </p>
-        </section>
-
+        {/* 무엇을 기록하나 */}
         <section className="mb-8">
           <div className="flex items-center gap-2 mb-4">
             <div className="bg-teal-100 p-2 rounded-md">
-              <BookOpen className="h-4 w-4 text-teal-600" />
+              <Target className="h-4 w-4 text-teal-600" />
             </div>
-            <h2 className="text-xl font-bold text-gray-900 m-0">다루는 주제 예시</h2>
+            <h2 className="text-xl font-bold text-gray-900 m-0">무엇을 기록하나요</h2>
           </div>
+          <p className="text-gray-700 leading-relaxed mb-3 text-sm">
+            운동을 하다, 또 일상을 지내다 생긴 염증과 통증을 겪었습니다.
+            증상이 시작된 시점부터 병원에서 진단을 받고 회복하기까지의 과정을
+            기억나는 대로가 아니라 <strong>남아 있는 기록 그대로</strong> 정리합니다.
+          </p>
+          <p className="text-gray-700 leading-relaxed text-sm">
+            같은 증상을 검색하던 때, 정작 알고 싶었던 것은 &ldquo;무슨 병인지&rdquo;보다
+            <strong> &ldquo;이게 위험한 건지, 병원에 가야 하는지, 얼마나 걸리는지&rdquo;</strong>
+            였습니다. 그 답이 잘 보이지 않아 답답했던 경험이 이 기록을 남기는 이유입니다.
+          </p>
+        </section>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-            <div className="bg-emerald-50 p-4 rounded-lg border border-emerald-100">
-              <h3 className="text-sm font-bold text-emerald-900 mb-1.5">주방</h3>
-              <p className="text-gray-700 text-xs leading-relaxed">
-                탄 냄비, 후드 기름때, 싱크대 배수구, 전자레인지·식기세척기
-                내부 청소 등
-              </p>
+        {/* 다루는 주제 */}
+        <section className="mb-8">
+          <div className="flex items-center gap-2 mb-4">
+            <div className="bg-orange-100 p-2 rounded-md">
+              <Flame className="h-4 w-4 text-orange-600" />
             </div>
-
-            <div className="bg-green-50 p-4 rounded-lg border border-green-100">
-              <h3 className="text-sm font-bold text-green-900 mb-1.5">욕실</h3>
-              <p className="text-gray-700 text-xs leading-relaxed">
-                변기·욕조 찌든 때, 줄눈 곰팡이, 거울 물때, 환풍기·배수구
-                관리 등
-              </p>
-            </div>
-
-            <div className="bg-amber-50 p-4 rounded-lg border border-amber-100">
-              <h3 className="text-sm font-bold text-amber-900 mb-1.5">세탁·의류</h3>
-              <p className="text-gray-700 text-xs leading-relaxed">
-                얼룩·핏자국 제거, 패딩·니트 세탁, 운동화·수건 관리,
-                세탁기 패킹 위생 등
-              </p>
-            </div>
-
-            <div className="bg-rose-50 p-4 rounded-lg border border-rose-100">
-              <h3 className="text-sm font-bold text-rose-900 mb-1.5">거실·침실·현관</h3>
-              <p className="text-gray-700 text-xs leading-relaxed">
-                벽지·방충망 먼지, 제습기·가습기·선풍기 청소, 옷장·신발장
-                관리, 현관 타일 등
-              </p>
-            </div>
+            <h2 className="text-xl font-bold text-gray-900 m-0">다루는 주제</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {ALL_CATEGORY_DEFS.map((cat) => (
+              <div
+                key={cat.slug}
+                className="bg-gray-50 p-4 rounded-lg border border-gray-100"
+              >
+                <h3 className="text-sm font-bold text-gray-900 mb-1.5">
+                  {cat.name}
+                </h3>
+                <p className="text-gray-700 text-xs leading-relaxed">
+                  {cat.description}
+                </p>
+              </div>
+            ))}
           </div>
         </section>
 
+        {/* 누가 쓰나 */}
         <section className="mb-8">
           <div className="flex items-center gap-2 mb-4">
             <div className="bg-indigo-100 p-2 rounded-md">
               <PencilLine className="h-4 w-4 text-indigo-600" />
             </div>
-            <h2 className="text-xl font-bold text-gray-900 m-0">
-              누가, 어떻게 쓰나요
-            </h2>
+            <h2 className="text-xl font-bold text-gray-900 m-0">누가 쓰나요</h2>
           </div>
           <p className="text-gray-700 leading-relaxed mb-3 text-sm">
-            {SITE_NAME_EUI} 글은 편집팀이 제조사 사용설명서와 공개된 화학·안전
-            자료를 교차 확인해 정리합니다. 같은 오염이라도 재질과 세제의 성질에
-            따라 방법이 달라지므로, 단순 정보 나열이 아니라 <strong>왜 그렇게
-            해야 하는지</strong>의 원리를 함께 설명합니다.
-          </p>
-          <p className="text-gray-700 leading-relaxed mb-3 text-sm">
-            그래서 각 글에는 준비물·순서뿐 아니라 <strong>재질별 대응 비교표</strong>,
-            <strong>섞으면 위험한 세제 같은 안전 주의</strong>, 자주 묻는 질문을
-            함께 담아, 따라 하기 전에 위험과 한계를 먼저 알 수 있게 했습니다.
-          </p>
-          <ul className="space-y-2 text-gray-700 text-sm">
-            <li>
-              <strong>출처 검증</strong> — 제조사 안내·공개 자료로 교차 확인 후 작성
-            </li>
-            <li>
-              <strong>정기 점검</strong> — 더 나은 방법을 찾으면 기존 글을 수정·보완
-            </li>
-            <li>
-              <strong>독자 피드백 반영</strong> — 제보된 오류·보완점을 검토 후 갱신
-            </li>
-          </ul>
-        </section>
-
-        <section className="mb-8">
-          <div className="flex items-center gap-2 mb-4">
-            <div className="bg-green-100 p-2 rounded-md">
-              <Shield className="h-4 w-4 text-green-600" />
-            </div>
-            <h2 className="text-xl font-bold text-gray-900 m-0">콘텐츠 원칙</h2>
-          </div>
-          <ul className="space-y-2 text-gray-700 text-sm">
-            <li>
-              <strong>실용성</strong> — 준비물·단계·주의사항을 중심으로 정리
-            </li>
-            <li>
-              <strong>명확한 표현</strong> — 세제·재질별 차이를 풀어서 설명
-            </li>
-            <li>
-              <strong>안전</strong> — 락스·산성 세제 혼합 금지 등 위험 요소 명시
-            </li>
-            <li>
-              <strong>신뢰</strong> — 과장·클릭 유도 제목을 피하고 정보 목적 유지
-            </li>
-          </ul>
-        </section>
-
-        <section className="mb-8">
-          <div className="flex items-center gap-2 mb-4">
-            <div className="bg-sky-100 p-2 rounded-md">
-              <Users className="h-4 w-4 text-sky-600" />
-            </div>
-            <h2 className="text-xl font-bold text-gray-900 m-0">운영 안내</h2>
-          </div>
-          <p className="text-gray-700 leading-relaxed mb-3 text-sm">
-            {SITE_NAME_EUI} 안내는 작성 시점에 직접 시도한 일반적인 방법을
-            바탕으로 합니다. 제품·재질·오염 상태에 따라 결과가 달라질 수
-            있으니, 민감한 소재는 눈에 띄지 않는 곳에서 먼저 테스트하고
-            제품 공식 안내를 함께 확인해 주세요.
+            <strong>{SITE_AUTHOR}</strong>가 씁니다. {SITE_AUTHOR_BIO}
           </p>
           <p className="text-gray-700 leading-relaxed text-sm">
-            오류나 보완이 필요한 내용이 있으면 알려주시면 검토 후 반영하겠습니다.
+            그래서 이 사이트는 <strong>겪지 않은 증상은 다루지 않습니다.</strong>
+            직접 겪은 일만, 진료받은 내용과 남은 기록을 근거로 씁니다.
           </p>
+        </section>
+
+        {/* 글을 쓰는 원칙 */}
+        <section className="mb-8">
+          <div className="flex items-center gap-2 mb-4">
+            <div className="bg-slate-100 p-2 rounded-md">
+              <Shield className="h-4 w-4 text-slate-600" />
+            </div>
+            <h2 className="text-xl font-bold text-gray-900 m-0">글을 쓰는 원칙</h2>
+          </div>
+          <ul className="space-y-2 text-gray-700 text-sm">
+            <li>
+              <strong>치료법을 말하지 않습니다</strong> — &ldquo;이렇게 하면 낫는다&rdquo;가 아니라
+              &ldquo;나는 이랬고, 병원에서 이런 말을 들었다&rdquo;로 씁니다.
+            </li>
+            <li>
+              <strong>병원에 가야 하는 신호를 먼저 씁니다</strong> — 위험한 증상은 글 맨 앞에 둡니다.
+            </li>
+            <li>
+              <strong>효과 없던 것도 씁니다</strong> — 도움이 된 것만 골라 쓰지 않습니다.
+            </li>
+            <li>
+              <strong>의학 정보는 출처를 밝힙니다</strong> — 진료받은 내용과 공개된 의학 자료를 구분해 표기합니다.
+            </li>
+            <li>
+              <strong>약·보조제 효능을 단정하지 않습니다.</strong>
+            </li>
+          </ul>
+        </section>
+
+        {/* 의료 면책 */}
+        <section className="mb-8">
+          <div className="flex items-center gap-2 mb-4">
+            <div className="bg-red-100 p-2 rounded-md">
+              <AlertTriangle className="h-4 w-4 text-red-600" />
+            </div>
+            <h2 className="text-xl font-bold text-gray-900 m-0">
+              꼭 읽어주세요 (의료 면책)
+            </h2>
+          </div>
+          <div className="bg-red-50 border border-red-200 rounded-lg p-4">
+            <p className="text-sm text-red-900 leading-relaxed m-0">
+              {MEDICAL_DISCLAIMER}
+            </p>
+          </div>
         </section>
 
         <section className="mb-6">
-          <div className="bg-emerald-600 text-white p-6 rounded-lg">
-            <h2 className="text-lg font-bold mb-2">문의·제안</h2>
-            <p className="mb-4 text-emerald-100 text-sm">
-              다루었으면 하는 주제나 수정이 필요한 부분이 있으면 연락해 주세요.
+          <div className="bg-teal-600 text-white p-6 rounded-lg">
+            <h2 className="text-lg font-bold mb-2">문의·정정 요청</h2>
+            <p className="mb-4 text-teal-100 text-sm">
+              내용에 사실과 다른 부분이 있거나, 더 궁금한 점이 있으면 알려주세요.
             </p>
             <Link
               href="/contact"
-              className="inline-block bg-white text-emerald-600 px-5 py-2 rounded-md font-semibold text-sm hover:bg-emerald-50 transition-colors no-underline"
+              className="inline-block bg-white text-teal-600 px-5 py-2 rounded-md font-semibold text-sm hover:bg-teal-50 transition-colors no-underline"
             >
               문의하기
             </Link>
           </div>
-        </section>
-
-        <section className="text-xs text-gray-500 border-t pt-6">
-          <p>
-            <strong>면책:</strong> 본 사이트 콘텐츠는 참고용이며, 세제 사용·
-            청소 작업에 따른 손상·건강 문제에 대한 책임은 이용자에게 있습니다.
-            전기·가스 작업은 전문가에게 문의하세요.
-          </p>
         </section>
       </article>
     </div>

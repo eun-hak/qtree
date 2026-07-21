@@ -14,7 +14,7 @@ export default function TermsPage() {
       {/* Breadcrumb */}
       <div className="mb-8">
         <div className="flex items-center text-sm text-gray-500">
-          <Link href="/" className="hover:text-emerald-600 cursor-pointer">홈</Link>
+          <Link href="/" className="hover:text-teal-600 cursor-pointer">홈</Link>
           <ChevronRight className="h-4 w-4 mx-1" />
           <span className="font-medium text-gray-900">이용약관</span>
         </div>
@@ -36,7 +36,7 @@ export default function TermsPage() {
           <h2 className="text-2xl font-bold mb-4 text-gray-900">제2조 (정의)</h2>
           <p className="text-gray-700 leading-relaxed mb-4">이 약관에서 사용하는 용어의 정의는 다음과 같습니다:</p>
           <ul className="list-disc pl-6 space-y-2 text-gray-700">
-            <li><strong>&quot;서비스&quot;</strong>란 사이트가 제공하는 생활 가이드 콘텐츠 조회 서비스를 의미합니다.</li>
+            <li><strong>&quot;서비스&quot;</strong>란 사이트가 제공하는 개인 건강 경험 기록 콘텐츠 조회 서비스를 의미합니다.</li>
             <li><strong>&quot;이용자&quot;</strong>란 이 약관에 따라 서비스에 접속하여 콘텐츠를 이용하는 자를 말합니다.</li>
           </ul>
         </section>
@@ -56,7 +56,7 @@ export default function TermsPage() {
           <h2 className="text-2xl font-bold mb-4 text-gray-900">제4조 (서비스의 제공)</h2>
           <p className="text-gray-700 leading-relaxed mb-4">사이트는 다음과 같은 서비스를 제공합니다:</p>
           <ul className="list-disc pl-6 space-y-2 text-gray-700">
-            <li>주방·욕실·세탁·거실·침실·현관 등 생활 청소 및 관리 가이드 콘텐츠 제공</li>
+            <li>염증·통증·회복 습관 등 운영자가 직접 겪은 건강 경험 기록 콘텐츠 제공</li>
             <li>콘텐츠 검색 및 조회 서비스</li>
             <li>기타 사이트가 추가 개발하거나 제휴계약 등을 통해 이용자에게 제공하는 서비스</li>
           </ul>
@@ -160,7 +160,7 @@ export default function TermsPage() {
           <h3 className="font-bold text-lg mb-2 text-gray-900">부칙</h3>
           <p className="text-sm text-gray-600">본 약관은 2026년 6월 16일부터 시행됩니다.</p>
           <p className="text-sm text-gray-600 mt-2">
-            이용약관에 대한 문의사항이 있으시면 <Link href="/contact" className="text-emerald-600 underline font-semibold">문의하기</Link> 페이지를 통해 연락해 주시기 바랍니다.
+            이용약관에 대한 문의사항이 있으시면 <Link href="/contact" className="text-teal-600 underline font-semibold">문의하기</Link> 페이지를 통해 연락해 주시기 바랍니다.
           </p>
         </div>
       </article>

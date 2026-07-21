@@ -101,8 +101,8 @@ export default function RootLayout({
           sizes="192x192"
         />
         <link rel="apple-touch-icon" href="/apple-icon.svg" sizes="180x180" />
-        <meta name="theme-color" content="#059669" />
-        <meta name="msapplication-TileColor" content="#059669" />
+        <meta name="theme-color" content="#0f766e" />
+        <meta name="msapplication-TileColor" content="#0f766e" />
         <meta name="msapplication-TileImage" content="/icon.svg" />
         <meta
           name="google-adsense-account"

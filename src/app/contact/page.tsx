@@ -50,7 +50,7 @@ export default function ContactPage() {
     <div className="container mx-auto px-4 max-w-3xl py-8">
       <div className="mb-5">
         <div className="flex items-center text-xs text-gray-500">
-          <Link href="/" className="hover:text-emerald-600 cursor-pointer">홈</Link>
+          <Link href="/" className="hover:text-teal-600 cursor-pointer">홈</Link>
           <ChevronRight className="h-3 w-3 mx-1" />
           <span className="font-medium text-gray-900">문의하기</span>
         </div>
@@ -65,10 +65,10 @@ export default function ContactPage() {
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
         <div className="lg:col-span-1 space-y-4">
-          <div className="bg-emerald-50 p-4 rounded-lg border border-emerald-100">
+          <div className="bg-teal-50 p-4 rounded-lg border border-teal-100">
             <div className="flex items-center gap-2 mb-3">
-              <div className="bg-emerald-100 p-1.5 rounded-md">
-                <Mail className="h-4 w-4 text-emerald-600" />
+              <div className="bg-teal-100 p-1.5 rounded-md">
+                <Mail className="h-4 w-4 text-teal-600" />
               </div>
               <h3 className="font-bold text-gray-900 text-sm">이메일</h3>
             </div>
@@ -77,7 +77,7 @@ export default function ContactPage() {
             </p>
             <a
               href={`mailto:${SITE_EMAIL}`}
-              className="text-emerald-600 font-semibold hover:underline block text-sm"
+              className="text-teal-600 font-semibold hover:underline block text-sm"
             >
               {SITE_EMAIL}
             </a>
@@ -197,8 +197,8 @@ export default function ContactPage() {
               </p>
             </div>
 
-            <div className="bg-emerald-50 border border-emerald-200 p-3 rounded-lg">
-              <p className="text-xs text-emerald-900">
+            <div className="bg-teal-50 border border-teal-200 p-3 rounded-lg">
+              <p className="text-xs text-teal-900">
                 <strong>개인정보 처리:</strong> 제공해주신 정보는 문의 응대 목적으로만 사용되며,
                 답변 완료 후 일정 기간 경과 시 안전하게 파기됩니다.
                 자세한 내용은 <Link href="/privacy-policy" className="underline font-semibold">개인정보처리방침</Link>을 참조하세요.
@@ -208,7 +208,7 @@ export default function ContactPage() {
             <Button
               type="submit"
               disabled={isSubmitting}
-              className="w-full md:w-auto bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-2 text-sm"
+              className="w-full md:w-auto bg-teal-600 hover:bg-teal-700 text-white px-6 py-2 text-sm"
             >
               {isSubmitting ? (
                 <>처리 중...</>
@@ -233,7 +233,7 @@ export default function ContactPage() {
               <div>
                 <p className="font-semibold text-gray-900">Q. 기고나 협업이 가능한가요?</p>
                 <p className="text-gray-700">
-                  A. 청소·세탁·가전·공간 관리 등 실전 생활 가이드 기고를 검토합니다.
+                  A. 염증·통증·회복 습관 등 직접 겪은 건강 경험 기록에 한해 검토합니다.
                 </p>
               </div>
               <div>
@@ -250,21 +250,21 @@ export default function ContactPage() {
       <div className="border-t pt-6">
         <h2 className="text-base font-bold text-gray-900 mb-4">다른 연락 방법</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-          <div className="p-3 border border-gray-200 rounded-lg hover:border-emerald-300 transition-colors">
+          <div className="p-3 border border-gray-200 rounded-lg hover:border-teal-300 transition-colors">
             <h3 className="font-semibold text-gray-900 mb-1 text-sm">일반 문의</h3>
-            <a href={`mailto:${SITE_EMAIL}`} className="text-emerald-600 text-xs hover:underline">
+            <a href={`mailto:${SITE_EMAIL}`} className="text-teal-600 text-xs hover:underline">
               {SITE_EMAIL}
             </a>
           </div>
-          <div className="p-3 border border-gray-200 rounded-lg hover:border-emerald-300 transition-colors">
+          <div className="p-3 border border-gray-200 rounded-lg hover:border-teal-300 transition-colors">
             <h3 className="font-semibold text-gray-900 mb-1 text-sm">개인정보 관련</h3>
-            <a href={`mailto:${SITE_EMAIL}`} className="text-emerald-600 text-xs hover:underline">
+            <a href={`mailto:${SITE_EMAIL}`} className="text-teal-600 text-xs hover:underline">
               {SITE_EMAIL}
             </a>
           </div>
-          <div className="p-3 border border-gray-200 rounded-lg hover:border-emerald-300 transition-colors">
+          <div className="p-3 border border-gray-200 rounded-lg hover:border-teal-300 transition-colors">
             <h3 className="font-semibold text-gray-900 mb-1 text-sm">제휴 및 협업</h3>
-            <a href={`mailto:${SITE_EMAIL}`} className="text-emerald-600 text-xs hover:underline">
+            <a href={`mailto:${SITE_EMAIL}`} className="text-teal-600 text-xs hover:underline">
               {SITE_EMAIL}
             </a>
           </div>

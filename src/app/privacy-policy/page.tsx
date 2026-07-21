@@ -14,7 +14,7 @@ export default function PrivacyPolicyPage() {
       {/* Breadcrumb */}
       <div className="mb-8">
         <div className="flex items-center text-sm text-gray-500">
-          <Link href="/" className="hover:text-emerald-600 cursor-pointer">홈</Link>
+          <Link href="/" className="hover:text-teal-600 cursor-pointer">홈</Link>
           <ChevronRight className="h-4 w-4 mx-1" />
           <span className="font-medium text-gray-900">개인정보 처리 방침</span>
         </div>
@@ -176,8 +176,8 @@ export default function PrivacyPolicyPage() {
             이 개인정보 처리방침은 2026년 6월 16일부터 적용되며, 법령 및 방침에 따른 변경내용의 추가, 삭제 및 정정이 있는 경우에는 
             변경사항의 시행 7일 전부터 공지사항을 통하여 고지할 것입니다.
           </p>
-          <div className="bg-emerald-50 border border-emerald-200 p-6 rounded-lg">
-            <p className="text-sm text-emerald-900">
+          <div className="bg-teal-50 border border-teal-200 p-6 rounded-lg">
+            <p className="text-sm text-teal-900">
               <strong>문의 및 신고:</strong><br />
               개인정보 처리방침에 대한 문의사항이 있으시면 <Link href="/contact" className="underline font-semibold">문의하기</Link> 페이지를 통해 연락해 주시기 바랍니다.<br />
               이메일: {SITE_EMAIL}

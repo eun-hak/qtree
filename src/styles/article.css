@@ -8,8 +8,8 @@
 .article-content .qt-tldr {
   margin: 0 0 1.5rem;
   padding: 1rem 1.1rem;
-  background: #ecfdf5;
-  border: 1px solid #a7f3d0;
+  background: #f0fdfa;
+  border: 1px solid #99f6e4;
   border-radius: 0.75rem;
 }
 .article-content .qt-tldr-title {
@@ -20,7 +20,7 @@
   font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 0.02em;
-  color: #047857;
+  color: #0f766e;
   text-transform: none;
 }
 .article-content .qt-tldr ul {
@@ -32,7 +32,7 @@
   margin: 0.2rem 0;
   font-size: 0.875rem;
   line-height: 1.6;
-  color: #065f46;
+  color: #115e59;
 }
 
 /* ---- 비교/대응 표 ------------------------------------------------------- */
@@ -51,12 +51,12 @@
   min-width: 460px;
 }
 .article-content thead th {
-  background: #f0fdf4;
-  color: #064e3b;
+  background: #f0fdfa;
+  color: #134e4a;
   font-weight: 700;
   text-align: left;
   padding: 0.6rem 0.75rem;
-  border-bottom: 1px solid #d1fae5;
+  border-bottom: 1px solid #ccfbf1;
   white-space: nowrap;
 }
 .article-content tbody td,
@@ -129,8 +129,97 @@
   font-size: 0.72rem;
   font-weight: 700;
   color: #fff;
-  background: #059669;
+  background: #0d9488;
   border-radius: 9999px;
+}
+
+/* ---- 🚨 병원부터 가야 하는 신호 (레드플래그) --------------------------- */
+/* 건강 글에서 가장 중요한 안전 장치. 보통 본문 최상단에 배치합니다. */
+.article-content .qt-redflag {
+  margin: 0 0 1.5rem;
+  padding: 1rem 1.1rem;
+  background: #fef2f2;
+  border: 1px solid #fca5a5;
+  border-left: 4px solid #dc2626;
+  border-radius: 0.6rem;
+}
+.article-content .qt-redflag-title {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0 0 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #b91c1c;
+}
+.article-content .qt-redflag ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  list-style: disc;
+}
+.article-content .qt-redflag li {
+  margin: 0.2rem 0;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: #7f1d1d;
+}
+.article-content .qt-redflag p {
+  margin: 0.5rem 0 0;
+  font-size: 0.82rem;
+  color: #7f1d1d;
+}
+
+/* ---- 증상 타임라인 ----------------------------------------------------- */
+.article-content .qt-timeline {
+  margin: 1.25rem 0;
+  padding: 0;
+  list-style: none;
+  border-left: 2px solid #ccfbf1;
+}
+.article-content .qt-timeline li {
+  position: relative;
+  margin: 0;
+  padding: 0 0 1.1rem 1.1rem;
+  font-size: 0.875rem;
+  line-height: 1.65;
+  color: #374151;
+  list-style: none;
+}
+.article-content .qt-timeline li::before {
+  content: "";
+  position: absolute;
+  left: -0.32rem;
+  top: 0.45rem;
+  width: 0.55rem;
+  height: 0.55rem;
+  background: #0d9488;
+  border-radius: 9999px;
+}
+.article-content .qt-timeline li:last-child {
+  padding-bottom: 0;
+}
+.article-content .qt-timeline .qt-when {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #0f766e;
+  margin-bottom: 0.15rem;
+}
+
+/* ---- 의료 면책 고지 ---------------------------------------------------- */
+.article-content .qt-disclaimer,
+.qt-disclaimer {
+  margin: 1.5rem 0 0;
+  padding: 0.85rem 1rem;
+  background: #f9fafb;
+  border: 1px dashed #d1d5db;
+  border-radius: 0.6rem;
+  font-size: 0.78rem;
+  line-height: 1.6;
+  color: #6b7280;
+}
+.qt-disclaimer strong {
+  color: #4b5563;
 }
 
 /* ---- 참고/출처 --------------------------------------------------------- */
@@ -156,4 +245,4 @@
   color: #6b7280;
   margin: 0.25rem 0;
 }
-.article-content .qt-sources a { color: #059669; }
+.article-content .qt-sources a { color: #0d9488; }

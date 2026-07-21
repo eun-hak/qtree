@@ -42,9 +42,14 @@ const nextConfig = {
 
         return [
             ...legacyPostRedirects,
-            { source: '/post/4', destination: '/post/burnt-pot-baking-soda-clean', permanent: true },
-            // 단일 카테고리(services) 시절 URL → 홈(매거진)으로 통합
+            // 예전 카테고리 URL → 홈으로 통합 (청소 시절 분류 포함)
             { source: '/category/services', destination: '/', permanent: true },
+            { source: '/category/kitchen', destination: '/', permanent: true },
+            { source: '/category/bathroom', destination: '/', permanent: true },
+            { source: '/category/laundry', destination: '/', permanent: true },
+            { source: '/category/appliance', destination: '/', permanent: true },
+            { source: '/category/living', destination: '/', permanent: true },
+            { source: '/category/safety', destination: '/', permanent: true },
             { source: '/category/lookup', destination: '/', permanent: true },
             { source: '/category/apply', destination: '/', permanent: true },
             { source: '/category/tools', destination: '/', permanent: true },

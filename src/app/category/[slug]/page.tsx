@@ -62,7 +62,7 @@ export default async function CategoryPage({ params }: PageProps) {
   return (
     <div className="container mx-auto px-4 max-w-3xl py-8">
       <div className="mb-3 flex items-center text-xs text-gray-500">
-        <Link href="/" className="hover:text-emerald-600 cursor-pointer">
+        <Link href="/" className="hover:text-teal-600 cursor-pointer">
           홈
         </Link>
         <ChevronRight className="h-3 w-3 mx-1" />
@@ -73,7 +73,7 @@ export default async function CategoryPage({ params }: PageProps) {
         <div className="flex-1">
           <div className="mb-6 border-b border-gray-100 pb-4">
             <h1 className="flex items-center gap-2 text-2xl font-bold tracking-tight text-gray-900 mb-2">
-              <Icon className="h-6 w-6 text-emerald-600" />
+              <Icon className="h-6 w-6 text-teal-600" />
               {category.name}
               <span className="align-middle text-sm font-normal text-gray-400">
                 {category.count}편
@@ -103,8 +103,7 @@ export default async function CategoryPage({ params }: PageProps) {
               {category.name} 소개
             </h3>
             <p className="text-xs text-gray-600 leading-relaxed">
-              {category.description} 새로운 생활 가이드가 추가될 때마다
-              업데이트합니다.
+              {category.description} 새로운 기록이 추가될 때마다 업데이트합니다.
             </p>
           </div>
 
@@ -119,8 +118,8 @@ export default async function CategoryPage({ params }: PageProps) {
                       href={`/category/${c.slug}`}
                       className={
                         c.slug === category.slug
-                          ? "flex items-center justify-between text-xs font-semibold text-emerald-700"
-                          : "flex items-center justify-between text-xs text-gray-600 hover:text-emerald-600"
+                          ? "flex items-center justify-between text-xs font-semibold text-teal-700"
+                          : "flex items-center justify-between text-xs text-gray-600 hover:text-teal-600"
                       }
                     >
                       <span className="flex items-center gap-1.5">
